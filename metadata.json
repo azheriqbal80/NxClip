@@ -1,0 +1,11 @@
+{
+  "name": "nxclip.ai",
+  "description": "Premium AI Operating System for Gaming Creators. Generate professional gaming images, edit viral clips, and scale your audience with creator intelligence.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

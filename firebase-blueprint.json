@@ -1,0 +1,153 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user profile information, settings, and subscription status.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "displayName": { "type": "string", "description": "User's display name" },
+        "email": { "type": "string", "description": "User's email address" },
+        "photoURL": { "type": "string", "description": "User's profile picture URL" },
+        "bio": { "type": "string", "description": "User's bio" },
+        "role": { "type": "string", "enum": ["user", "admin", "creator"], "description": "User's role for RBAC" },
+        "gameNiches": { "type": "array", "items": { "type": "string" }, "description": "Specific gaming niches" },
+        "games": { "type": "array", "items": { "type": "string" }, "description": "Games the user plays" },
+        "audience": { "type": "string", "description": "Target audience type" },
+        "goal": { "type": "string", "description": "Primary creator goal" },
+        "frequency": { "type": "string", "description": "Posting frequency" },
+        "startPoint": { "type": "string", "description": "Starting point (clips vs fresh)" },
+        "contentPlan": { 
+          "type": "array", 
+          "items": { 
+            "type": "object",
+            "properties": {
+              "day": { "type": "string" },
+              "type": { "type": "string", "enum": ["image", "meme", "clip"] },
+              "theme": { "type": "string" },
+              "tip": { "type": "string" }
+            }
+          },
+          "description": "Generated 7-day content plan"
+        },
+        "platforms": { "type": "array", "items": { "type": "string" }, "description": "Where the user posts" },
+        "socials": { 
+          "type": "object",
+          "properties": {
+            "twitch": { "type": "string" },
+            "youtube": { "type": "string" },
+            "tiktok": { "type": "string" },
+            "twitter": { "type": "string" }
+          }
+        },
+        "vibe": { "type": "string", "description": "Creator's style vibe" },
+        "creatorName": { "type": "string", "description": "Custom creator name" },
+        "tone": { "type": "string", "description": "Preferred content tone" },
+        "captionStyle": { "type": "string", "description": "Preferred caption style" },
+        "plan": { "type": "string", "enum": ["free", "pro", "studio"], "description": "Subscription plan" },
+        "generationsLeft": { "type": "number", "description": "Number of AI image generations remaining" },
+        "onboardingCompleted": { "type": "boolean", "description": "Whether onboarding is finished" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "plan", "role"]
+    },
+    "Creation": {
+      "title": "Creation",
+      "description": "Stores AI generated content (images, memes, clips).",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "uid": { "type": "string", "description": "Owner's UID" },
+        "type": { "type": "string", "enum": ["image", "meme", "clip"] },
+        "url": { "type": "string", "description": "CDN/Storage URL of the content" },
+        "prompt": { "type": "string", "description": "AI prompt used" },
+        "style": { "type": "string", "description": "AI style preset used" },
+        "caption": { "type": "string", "description": "Generated caption" },
+        "hashtags": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["processing", "published", "rejected"] },
+        "likes": { "type": "number", "description": "Number of likes" },
+        "likedBy": { "type": "array", "items": { "type": "string" }, "description": "UIDs of users who liked this" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "type", "url", "status"]
+    },
+    "AnalyticsReport": {
+      "title": "Analytics Report",
+      "description": "Weekly AI-generated performance reports.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "weekEnding": { "type": "string", "format": "date" },
+        "summary": { "type": "string", "description": "Claude-generated narrative" },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "views": { "type": "number" },
+            "likes": { "type": "number" },
+            "shares": { "type": "number" },
+            "completionRate": { "type": "number" }
+          }
+        },
+        "actionItems": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["uid", "weekEnding", "summary"]
+    },
+    "ChatSession": {
+      "title": "Chat Session",
+      "description": "Stores conversation history with the AI Coach.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Owner's UID" },
+        "title": { "type": "string", "description": "Chat session title" },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "role": { "type": "string", "enum": ["user", "model"] },
+              "text": { "type": "string" },
+              "timestamp": { "type": "string", "format": "date-time" }
+            }
+          }
+        },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "messages", "updatedAt"]
+    },
+    "TestConnection": {
+      "title": "Connection Test",
+      "description": "Minimal document used to verify Firestore connectivity.",
+      "type": "object",
+      "properties": {
+        "status": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/creations/{creationId}": {
+      "schema": "Creation",
+      "description": "AI generated content"
+    },
+    "/analytics/{reportId}": {
+      "schema": "AnalyticsReport",
+      "description": "Weekly reports"
+    },
+    "/chats/{chatId}": {
+      "schema": "ChatSession",
+      "description": "Coach chat sessions"
+    },
+    "/admins/{uid}": {
+      "schema": "UserProfile",
+      "description": "Admin access control list"
+    },
+    "/test/{docId}": {
+      "schema": "TestConnection",
+      "description": "Public read-only path for health checks"
+    }
+  }
+}

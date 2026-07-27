@@ -1,0 +1,1110 @@
+src/pages/CreateHub.tsx:                          "w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110",
+src/pages/CreateHub.tsx:                          "bg-primary/10 text-primary"
+src/pages/CreateHub.tsx:                          <Badge variant={locked ? "destructive" : "secondary"} className="rounded-full text-[10px] font-bold tracking-widest px-3 py-1">
+src/pages/CreateHub.tsx:                          <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+src/pages/CreateHub.tsx:                          <span className="text-[10px] font-bold tracking-widest text-muted-foreground">{t('create.tools.locked')}</span>
+src/pages/CreateHub.tsx:                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+src/pages/CreateHub.tsx:                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
+src/pages/CreateHub.tsx:                    <div className="text-white text-[10px] font-bold tracking-widest bg-primary/80 px-2 py-1 rounded mb-2">
+src/pages/Signup.tsx:    retVal += "0123456789"[Math.floor(Math.random() * 10)];
+src/pages/Signup.tsx:      }, 1000);
+src/pages/Signup.tsx:        className="w-full max-w-[480px] glass rounded-xl shadow-2xl p-8 md:p-10 border border-border/50 relative overflow-hidden"
+src/pages/Signup.tsx:        <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+src/pages/Signup.tsx:        <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl pointer-events-none" />
+src/pages/Signup.tsx:        <div className="relative z-10">
+src/pages/Signup.tsx:            <p className="text-muted-foreground font-medium text-xs">Join 10,000+ gaming creators</p>
+src/pages/Signup.tsx:              className="mb-6 p-4 bg-destructive/10 border border-destructive/20 text-destructive rounded-xl text-xs font-medium flex items-center gap-3"
+src/pages/Signup.tsx:            <div className="mb-6 p-4 bg-primary/10 border border-primary/20 text-primary rounded-xl text-xs font-medium">
+src/pages/Signup.tsx:                    "pl-11 pr-10 py-6 bg-muted/20",
+src/pages/Signup.tsx:                      className="text-[10px] font-bold text-primary hover:bg-primary/10 px-2 py-0.5 rounded-full border border-primary/20 transition-colors"
+src/pages/Signup.tsx:                      <RefreshCw size={10} />
+src/pages/Signup.tsx:                    <Key size={10} />
+src/pages/Signup.tsx:                      req.met ? "bg-primary/20 text-primary scale-110" : "bg-muted/50 text-muted-foreground/20"
+src/pages/Analytics.tsx:  { id: 4, type: "Meme", title: "Final Boss Energy", game: "Elden Ring", platform: "TikTok", views: 23100, engagement: 15.1, shares: 3400, saves: 890, date: "2024-03-17", viral: 84, thumbnail: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=200&auto=format&fit=crop" },
+src/pages/Analytics.tsx:  { id: 'youtube', name: 'YouTube', icon: Youtube, views: 342000, engagement: 5.4, growth: '+8.2%', followers: 450, shares: 12100, color: '#FF0000' },
+src/pages/Analytics.tsx:  { name: "Valorant", views: 76000, engagement: 10.5, color: "var(--tertiary)", status: "Steady" },
+src/pages/Analytics.tsx:    { range: '35+', val: 10 },
+src/pages/Analytics.tsx:      value: Math.floor(Math.random() * 100),
+src/pages/Analytics.tsx:    avgDurationSeconds: 210, 
+src/pages/Analytics.tsx:    color: "#10b981",
+src/pages/Analytics.tsx:    growth: 10,
+src/pages/Analytics.tsx:const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+src/pages/Analytics.tsx:        <p className="text-[10px] font-bold text-muted-foreground mb-2 border-b border-border pb-1 rtl:text-right">{label}</p>
+src/pages/Analytics.tsx:                <span className="text-[10px] font-bold text-muted-foreground">{entry.name}</span>
+src/pages/Analytics.tsx:          <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm shadow-primary/5">
+src/pages/Analytics.tsx:            trend > 0 ? "text-brand-secondary bg-brand-secondary/10 border border-brand-secondary/20" : "text-destructive bg-destructive/10 border border-destructive/20"
+src/pages/Analytics.tsx:            {trend > 0 ? <TrendingUp size={10} /> : <TrendingDown size={10} />}
+src/pages/Analytics.tsx:          <h4 className="text-[10px] font-bold text-muted-foreground tracking-widest leading-none mb-1.5 uppercase">{title}</h4>
+src/pages/Analytics.tsx:    <TableCell className="pl-6"><div className="flex items-center gap-3"><Skeleton className="h-14 w-10 rounded" /><div className="space-y-2"><Skeleton className="h-3 w-32" /><Skeleton className="h-2 w-16" /></div></div></TableCell>
+src/pages/Analytics.tsx:    <TableCell className="text-right"><Skeleton className="h-4 w-10 ml-auto rounded-full" /></TableCell>
+src/pages/Analytics.tsx:      <Skeleton className="w-10 h-10 rounded-lg" />
+src/pages/Analytics.tsx:      <div className="space-y-2"><Skeleton className="h-2 w-10" /><Skeleton className="h-6 w-16" /></div>
+src/pages/Analytics.tsx:      <div className="space-y-2"><Skeleton className="h-2 w-10" /><Skeleton className="h-6 w-16" /></div>
+src/pages/Analytics.tsx:          <Skeleton className="h-3 w-10 ml-auto" />
+src/pages/Analytics.tsx:  const [center, setCenter] = useState<[number, number]>([10, 20]);
+src/pages/Analytics.tsx:      scale: scaleLinear<string>().domain([0, 100]).range(["#1a1a1a", "#10b981"]).interpolate(interpolateRgb),
+src/pages/Analytics.tsx:      max: "100%"
+src/pages/Analytics.tsx:                  className="h-7 text-[9px] md:text-[10px] font-bold px-2.5 md:px-3 transition-all"
+src/pages/Analytics.tsx:                <SelectTrigger className="w-[110px] md:w-[130px] h-8 text-[10px] font-bold bg-card border-border">
+src/pages/Analytics.tsx:                <SelectTrigger className="w-[110px] md:w-[130px] h-8 text-[10px] font-bold bg-card border-border">
+src/pages/Analytics.tsx:              initial={{ opacity: 0, x: -10 }}
+src/pages/Analytics.tsx:              exit={{ opacity: 0, x: 10 }}
+src/pages/Analytics.tsx:                            <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground">{t('analytics.charts.performance_pulse')}</CardTitle>
+src/pages/Analytics.tsx:                          <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                            <AreaChart data={trends} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+src/pages/Analytics.tsx:                              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} dy={10} />
+src/pages/Analytics.tsx:                              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} />
+src/pages/Analytics.tsx:                              <CardTitle className="text-[10px] tracking-widest font-bold leading-none">{t('analytics.ai.title')}</CardTitle>
+src/pages/Analytics.tsx:                            <div className="p-3 rounded-lg bg-card/60 border border-primary/10">
+src/pages/Analytics.tsx:                        <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground">{t('analytics.overview.top_5_title')}</CardTitle>
+src/pages/Analytics.tsx:                               <Skeleton className="h-12 w-10 rounded" />
+src/pages/Analytics.tsx:                                <img src={item.thumbnail} className="w-10 h-12 object-cover rounded border border-border group-hover:scale-105 transition-transform" />
+src/pages/Analytics.tsx:                                   <p className="text-[10px] font-bold truncate group-hover:text-primary transition-colors tracking-tight rtl:text-right">{item.title}</p>
+src/pages/Analytics.tsx:                                      <span className="text-[9px] text-muted-foreground font-mono font-bold uppercase">{t('analytics.overview.views_label', { count: (item.views/1000).toFixed(1) })}</span>
+src/pages/Analytics.tsx:                                  <img src={item.thumbnail} className="w-10 h-14 object-cover rounded border border-border" />
+src/pages/Analytics.tsx:                            <TableCell className="ui-table-cell text-end font-bold text-[11px]">{t('analytics.overview.views_label', { count: (item.views/1000).toFixed(1) })}</TableCell>
+src/pages/Analytics.tsx:                               <div className="inline-flex items-center gap-1 ui-text-caption text-primary px-1.5 py-0.5 rounded-full bg-primary/10">
+src/pages/Analytics.tsx:                                  <Zap size={10} className="fill-primary" /> {item.viral}
+src/pages/Analytics.tsx:                                <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                                        { name: 'Likes', value: 3100 },
+src/pages/Analytics.tsx:                                    <div className="flex justify-between text-[10px] font-bold text-muted-foreground"><span>{t('analytics.creative.caption_perf')}</span><span>{t('common.high')}</span></div>
+src/pages/Analytics.tsx:                                    <div className="flex justify-between text-[10px] font-bold text-muted-foreground"><span>{t('analytics.creative.save_density')}</span><span>{t('common.medium')}</span></div>
+src/pages/Analytics.tsx:                                    <div className="flex justify-between text-[10px] font-bold text-muted-foreground"><span>{t('analytics.creative.share_multiplier')}</span><span>{t('common.critical')}</span></div>
+src/pages/Analytics.tsx:                          <CardHeader><CardTitle className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest leading-none">{t('analytics.creative.insights')}</CardTitle></CardHeader>
+src/pages/Analytics.tsx:                                    <p className="text-[10px] text-muted-foreground leading-relaxed italic">{t('analytics.creative.format_desc')}</p>
+src/pages/Analytics.tsx:                                    <p className="text-[10px] text-muted-foreground leading-relaxed italic">{t('analytics.creative.caption_desc')}</p>
+src/pages/Analytics.tsx:                        <Card key={p.id} className="rounded-lg border border-border bg-card shadow-soft group hover:bg-muted/10 transition-colors">
+src/pages/Analytics.tsx:                                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center border border-border group-hover:border-primary/20 transition-all shadow-sm" style={{ color: p.color }}><p.icon size={20} /></div>
+src/pages/Analytics.tsx:                                <Badge className="h-5 text-[9px] font-bold font-mono border-brand-secondary/20 text-brand-secondary bg-brand-secondary/10" variant="outline">{p.growth}</Badge>
+src/pages/Analytics.tsx:                                <div><p className="text-[9px] font-bold text-muted-foreground mb-1 uppercase tracking-wider">{t('analytics.platforms.views')}</p><p className="text-xl font-display font-black">{t('analytics.overview.views_label', { count: (p.views/1000).toFixed(0) })}</p></div>
+src/pages/Analytics.tsx:                                <div><p className="text-[9px] font-bold text-muted-foreground mb-1 uppercase tracking-wider">{t('analytics.platforms.followers')}</p><p className="text-xl font-display font-black text-primary">{t('analytics.overview.followers_label', { count: (p.followers/1000).toFixed(1) }).replace(t('analytics.metrics.followers'), '').trim()}</p></div>
+src/pages/Analytics.tsx:                                <div><p className="text-[9px] font-bold text-muted-foreground mb-1 uppercase tracking-wider">{t('analytics.platforms.shares')}</p><p className="text-xl font-display font-black">{t('analytics.overview.shares_label', { count: (p.shares/1000).toFixed(1) }).replace(t('analytics.metrics.shares'), '').trim()}</p></div>
+src/pages/Analytics.tsx:                                <Button variant="ghost" size="sm" className="h-8 text-[10px] font-bold w-full rounded-md tracking-widest hover:bg-primary/5 transition-colors">{t('analytics.platforms.deep_dive')} <ArrowUpRight size={10} className="ml-1 rtl:mr-1 rtl:ml-0 rtl:rotate-[-90deg]" /></Button>
+src/pages/Analytics.tsx:                          <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                               { name: 'YouTube', views: 342100, eng: 120000 },
+src/pages/Analytics.tsx:                                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} dy={10} />
+src/pages/Analytics.tsx:                                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} />
+src/pages/Analytics.tsx:                      <MetricCard title={t('geo.metric_reach')} value={geoRegionFilter === "all" ? REGION_TOTALS.reach : `${(geoTotals.views / 100).toFixed(1)}k`} trend={12.4} icon={Users} />
+src/pages/Analytics.tsx:                      <MetricCard title={t('geo.metric_viral')} value={geoRegionFilter === "all" ? "88/100" : `${GEO_INTEL_DATA.find(r => r.id === geoRegionFilter)?.viralityScore || 0}/100`} trend={6.2} icon={Zap} />
+src/pages/Analytics.tsx:                        <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground uppercase rtl:tracking-normal rtl:normal-case">{t('geo.map_title')}</CardTitle>
+src/pages/Analytics.tsx:                            <SelectItem value="all" className="text-[10px] font-bold uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t('geo.all_regions')}</SelectItem>
+src/pages/Analytics.tsx:                              <SelectItem key={region.id} value={region.id} className="text-[10px] font-bold uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t(`geo.regions.${region.id}` as any, { defaultValue: region.country })}</SelectItem>
+src/pages/Analytics.tsx:                            <SelectItem value="views" className="text-[10px] font-bold uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t('geo.layer_names.views')}</SelectItem>
+src/pages/Analytics.tsx:                            <SelectItem value="avgPercent" className="text-[10px] font-bold uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t('geo.layer_names.avgPercent')}</SelectItem>
+src/pages/Analytics.tsx:                            <SelectItem value="watchTime" className="text-[10px] font-bold uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t('geo.layer_names.watchTime')}</SelectItem>
+src/pages/Analytics.tsx:                              <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest rtl:tracking-normal rtl:normal-case animate-pulse">{t('geo.syncing')}</p>
+src/pages/Analytics.tsx:                                      className="p-0 bg-popover/90 backdrop-blur-xl border border-white/10 shadow-2xl min-w-[220px] rounded-xl"
+src/pages/Analytics.tsx:                                                  <p className="text-sm font-mono font-black">{t('analytics.overview.views_label', { count: (country.views / 1000).toFixed(1) })}</p>
+src/pages/Analytics.tsx:                                                  <p className="text-[10px] font-bold text-primary truncate">{country.topGame}</p>
+src/pages/Analytics.tsx:                                                  <p className="text-[10px] font-bold text-foreground truncate">{country.bestFormat}</p>
+src/pages/Analytics.tsx:                                              <p className="text-[10px] text-muted-foreground italic text-center py-2">{t('common.no_data')}</p>
+src/pages/Analytics.tsx:                      <div className="absolute bottom-6 right-6 rtl:right-auto rtl:left-6 z-20 flex flex-col gap-1 bg-background/40 backdrop-blur-xl border border-white/10 rounded-xl p-1">
+src/pages/Analytics.tsx:                        <Button variant="ghost" size="icon" className="h-8 w-8 hover:bg-white/5" onClick={() => {setZoom(1); setCenter([10, 20]);}}><RotateCcw size={14} /></Button>
+src/pages/Analytics.tsx:                        <CardDescription className="text-[10px]">{t('geo.opportunities_desc' as any, { defaultValue: 'AI-powered audience expansion strategies.' })}</CardDescription>
+src/pages/Analytics.tsx:                              <Badge className="text-[7px] h-3.5 px-1.5 font-black uppercase rtl:normal-case bg-primary/10 text-primary border-none">{t(`geo.strategy_types.${strat.type}` as any)}</Badge>
+src/pages/Analytics.tsx:                               <Button variant="ghost" size="sm" className="h-6 text-[9px] font-bold text-primary group-hover:bg-primary/10">{t('geo.take_action')} <ChevronRight size={10} className="ml-1 rtl:rotate-180" /></Button>
+src/pages/Analytics.tsx:                          <div key={region.id} className="p-4 flex items-center justify-between hover:bg-muted/10 transition-colors">
+src/pages/Analytics.tsx:                               <p className="text-[10px] font-bold text-muted-foreground uppercase">{t(`geo.regions.${region.id}` as any, { defaultValue: region.country })}</p>
+src/pages/Analytics.tsx:                              <div className="flex justify-between items-center text-[10px] font-bold">
+src/pages/Analytics.tsx:                        <div className="flex items-center justify-between text-[10px]">
+src/pages/Analytics.tsx:                        <div className="flex items-center justify-between text-[10px]">
+src/pages/Analytics.tsx:                        <div className="flex items-center justify-between text-[10px]">
+src/pages/Analytics.tsx:                           <span className="font-mono font-bold text-foreground">10PM IST</span>
+src/pages/Analytics.tsx:                          <div key={i} className="flex gap-4 p-3 bg-muted/10 border border-border/50 rounded-lg group hover:border-orange-500/30 transition-all">
+src/pages/Analytics.tsx:                            <p className="text-[10px] text-muted-foreground leading-relaxed">
+src/pages/Analytics.tsx:                        <TableHead className="pl-6 h-12 text-[10px] font-bold text-muted-foreground uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t('analytics.table.region_intel')}</TableHead>
+src/pages/Analytics.tsx:                        <TableHead className="text-end h-12 text-[10px] font-bold text-muted-foreground uppercase tracking-widest rtl:tracking-normal rtl:normal-case">{t('analytics.table.reach_index')}</TableHead>
+src/pages/Analytics.tsx:                        <TableHead className="text-end h-12 text-[10px] font-bold text-muted-foreground uppercase tracking-widest rtl:tracking-normal rtl:normal-case hidden sm:table-cell">{t('analytics.table.top_game')}</TableHead>
+src/pages/Analytics.tsx:                        <TableHead className="text-end h-12 text-[10px] font-bold text-muted-foreground uppercase tracking-widest rtl:tracking-normal rtl:normal-case hidden md:table-cell">{t('analytics.table.format_score')}</TableHead>
+src/pages/Analytics.tsx:                        <TableHead className="text-end h-12 text-[10px] font-bold text-muted-foreground uppercase tracking-widest rtl:tracking-normal rtl:normal-case pr-6">{t('analytics.table.virality_pulse')}</TableHead>
+src/pages/Analytics.tsx:                               <span className="text-[11px] font-mono font-bold text-primary">{(region.views / 1000).toFixed(1)}M</span>
+src/pages/Analytics.tsx:                                   <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground uppercase">{t('analytics.games.leaderboard_title')}</CardTitle>
+src/pages/Analytics.tsx:                               <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                                     <YAxis dataKey="name" type="category" axisLine={false} tickLine={false} tick={{ fontSize: 11, fontWeight: 700, fill: "var(--foreground)" }} width={110} />
+src/pages/Analytics.tsx:                                 <div className="pt-3 border-t border-border/10"><Skeleton className="h-8 w-full" /></div>
+src/pages/Analytics.tsx:                                         <div className="flex items-center justify-between text-[10px] font-mono font-bold text-muted-foreground">
+src/pages/Analytics.tsx:                                            <span>{t('analytics.table.views')}: {t('analytics.overview.views_label', { count: (g.views/1000).toFixed(1) })}</span>
+src/pages/Analytics.tsx:                                            <span className={g.engagement > 10 ? "text-brand-secondary" : "text-destructive"}>{g.engagement}{i18n.language === 'ar' ? '٪' : '%'} {t('analytics.overview.engagement_label' as any, { defaultValue: 'ENG' })}</span>
+src/pages/Analytics.tsx:                                     <div className="mt-3 pt-3 border-t border-border/10">
+src/pages/Analytics.tsx:                                        <p className="text-[10px] font-medium text-muted-foreground leading-relaxed">
+src/pages/Analytics.tsx:                                 <Skeleton className="h-10 w-10 rounded-xl bg-white/20" />
+src/pages/Analytics.tsx:                                     <div><p className="text-xl font-bold leading-tight">Apex Legends</p><p className="text-[10px] font-bold opacity-95 decoration-primary-foreground/20 underline underline-offset-4">{t('analytics.games.roi')}</p></div>
+src/pages/Analytics.tsx:                                  <Button variant="secondary" className="w-full text-[10px] font-bold h-9 rounded-md bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+src/pages/Analytics.tsx:                                 <TableCell className="ui-table-cell text-end font-mono">{t('analytics.overview.views_label', { count: (g.views/1000).toFixed(1) })}</TableCell>
+src/pages/Analytics.tsx:                                      g.status === "Top Performer" ? "bg-primary/10 text-primary" : 
+src/pages/Analytics.tsx:                                      g.status === "Low Engagement" ? "bg-destructive/10 text-destructive" :
+src/pages/Analytics.tsx:                                    <div className="inline-flex items-center gap-1 ui-text-caption font-bold text-brand-secondary bg-brand-secondary/10 px-2 py-0.5 rounded-full whitespace-nowrap">
+src/pages/Analytics.tsx:                                       <TrendingUp size={10} /> +12{i18n.language === 'ar' ? '٪' : '%'}
+src/pages/Analytics.tsx:                                  <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground flex items-center gap-2 uppercase">
+src/pages/Analytics.tsx:                                 <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                                           <span className="text-[10px] font-bold text-muted-foreground">{t(`analytics.audience.gender_types.${g.name.toLowerCase()}`)}</span>
+src/pages/Analytics.tsx:                                 <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                                       <XAxis dataKey="range" axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 700 }} dy={10} />
+src/pages/Analytics.tsx:                                 <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground uppercase leading-none">{t('analytics.audience.active_hours')}</CardTitle>
+src/pages/Analytics.tsx:                              <Badge variant="outline" className="bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20 rounded-full h-5 px-3 font-bold tracking-widest text-[8px]">{t('analytics.platforms.syncing')}</Badge>
+src/pages/Analytics.tsx:                                                     className="rounded-sm transition-transform hover:scale-110 cursor-help"
+src/pages/Analytics.tsx:                                                        backgroundColor: `rgba(var(--primary-rgb), ${val / 100})`,
+src/pages/Analytics.tsx:                                                        opacity: Math.max(0.1, val / 100)
+src/pages/Analytics.tsx:                                 <div className="flex items-center gap-1.5"><div className="w-2 h-2 rounded-sm bg-primary/10" /><span className="text-[8px] font-bold text-muted-foreground uppercase">{t('analytics.audience.heatmap.idle')}</span></div>
+src/pages/Analytics.tsx:                                <div className="ui-icon-chip-primary size-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-sm shadow-primary/5"><m.icon size={16} /></div>
+src/pages/Analytics.tsx:                                  m.trend.startsWith('+') ? "text-brand-secondary bg-brand-secondary/10 border-brand-secondary/20" : "text-destructive bg-destructive/10 border-destructive/20"
+src/pages/Analytics.tsx:                           <CardTitle className="text-[10px] tracking-widest font-bold text-muted-foreground uppercase">{t('analytics.retention.title')}</CardTitle>
+src/pages/Analytics.tsx:                           <ResponsiveContainer width="100%" height="100%">
+src/pages/Analytics.tsx:                                { time: '0s', val: 100 },
+src/pages/Analytics.tsx:                                { time: '10s', val: 56 },
+src/pages/Analytics.tsx:                                 <XAxis dataKey="time" axisLine={false} tickLine={false} tick={{ fontSize: 10 }} dy={10} />
+src/pages/Analytics.tsx:                                 <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10 }} unit="%" />
+src/pages/Analytics.tsx:                         <Skeleton className="h-10 w-full md:w-2/3" />
+src/pages/Analytics.tsx:                         <div className="absolute top-0 right-0 p-8 opacity-10 animate-pulse"><Sparkles size={120} className="text-primary" /></div>
+src/pages/Analytics.tsx:                            <Button size="lg" className="bg-primary text-primary-foreground font-display font-bold h-12 px-12 text-sm rounded-md shadow-xl shadow-primary/30 border border-primary/20 hover:scale-105 transition-transform">
+src/pages/Analytics.tsx:                           <div className="flex justify-between items-center bg-muted/10 p-4 -mx-4 -mt-4 border-b border-border/50">
+src/pages/Analytics.tsx:                            <CardHeader className="pb-2 border-b border-border/50 bg-muted/10 flex flex-row items-center justify-between cursor-default">
+src/pages/Analytics.tsx:                                  <Button variant="link" className="h-4 p-0 text-[10px] font-bold transition-colors hover:text-primary rounded-md">{t('analytics.ai.learn_strategy')} <ChevronRight size={10} className="ml-1" /></Button>
+src/pages/Analytics.tsx:                     <Button variant="outline" className="mt-6 text-[10px] font-bold h-9 px-8 rounded-md">Check Sync Logs</Button>
+src/pages/Analytics.tsx:           initial={{ opacity: 0, y: 10 }}
+src/pages/Analytics.tsx:              <div className="w-12 h-12 rounded-lg bg-muted border border-border flex items-center justify-center text-primary shadow-glow-primary/10">
+src/pages/Analytics.tsx:              <span className="text-[10px] hidden md:inline font-bold text-muted-foreground tracking-[0.2em]">{t('analytics.performance_footer.live_tracking')}: <span className="text-brand-secondary italic">{t('analytics.performance_footer.connected')}</span></span>
+src/pages/Analytics.tsx:              <Button size="sm" variant="brand" className="text-primary-foreground font-bold px-8 h-10 rounded-lg shadow-lg shadow-primary/20">
+src/pages/Onboarding.tsx:    const progress = (step / totalSteps) * 100;
+src/pages/Onboarding.tsx:              <Badge variant="outline" className="rounded-full px-2 py-0 text-[10px] font-bold border-primary/30 text-primary">
+src/pages/Onboarding.tsx:              <span className="text-[10px] font-bold text-muted-foreground tracking-widest">{t('onboarding.coach.of')} {totalSteps}</span>
+src/pages/Onboarding.tsx:            <p className="text-[10px] font-bold text-muted-foreground tracking-widest">{t('onboarding.coach.complete')}</p>
+src/pages/Onboarding.tsx:              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+src/pages/Onboarding.tsx:      <div className="absolute inset-0 dots-pattern opacity-5 dark:opacity-10 pointer-events-none" />
+src/pages/Onboarding.tsx:      <main className="flex-grow flex items-center justify-center px-4 py-12 sm:p-6 relative z-10">
+src/pages/Onboarding.tsx:                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+src/pages/Onboarding.tsx:                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-2">
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/Onboarding.tsx:                        "w-10 h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center",
+src/pages/Onboarding.tsx:                          <Check size={10} strokeWidth={4} className="lg:size-3" />
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/Onboarding.tsx:                        "w-10 h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center",
+src/pages/Onboarding.tsx:                        <p className="text-[9px] lg:text-[10px] text-muted-foreground leading-tight">{t(item.description)}</p>
+src/pages/Onboarding.tsx:                          <Check size={10} strokeWidth={4} className="lg:size-3" />
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/Onboarding.tsx:                        <p className="text-[10px] lg:text-xs text-muted-foreground leading-relaxed">{t(item.description)}</p>
+src/pages/Onboarding.tsx:                  <div className="w-12 h-12 bg-primary/10 rounded-md flex items-center justify-center text-primary mx-auto mb-2">
+src/pages/Onboarding.tsx:                        <div className="absolute -right-4 -top-4 w-12 h-12 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+src/pages/Onboarding.tsx:                        <div className="flex items-center justify-between relative z-10">
+src/pages/Onboarding.tsx:                            <span className="text-[9px] lg:text-[10px] font-black tracking-[0.2em] text-primary/60 mb-0.5">
+src/pages/Onboarding.tsx:                            day.type === "clip" ? "bg-blue-500/10 text-blue-400" : day.type === "meme" ? "bg-amber-500/10 text-amber-400" : "bg-purple-500/10 text-purple-400"
+src/pages/Onboarding.tsx:                        <div className="space-y-2 lg:space-y-3 relative z-10 flex-grow">
+src/pages/Onboarding.tsx:                        <div className="pt-2 flex items-center justify-between relative z-10 border-t border-border mt-auto">
+src/pages/Onboarding.tsx:                          <CheckCircle2 size={10} className="text-emerald-500 lg:size-3" />
+src/pages/Onboarding.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Onboarding.tsx:                        <div className={cn("w-14 h-14 rounded-lg bg-muted flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform", item.color)}>
+src/pages/Onboarding.tsx:                    <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-xs font-medium">
+src/pages/HomeFeed.tsx:    shares: 210,
+src/pages/HomeFeed.tsx:    engagement: 10.5,
+src/pages/HomeFeed.tsx:    dueTime: "10:00 AM", cta: "View Performance", objective: "Discovery Boost" 
+src/pages/HomeFeed.tsx:      <div className="absolute top-2 start-2 flex flex-wrap gap-1 max-w-[calc(100%-40px)]">
+src/pages/HomeFeed.tsx:          <p className="text-[10px] text-muted-foreground font-medium mt-1">
+src/pages/HomeFeed.tsx:            <Check size={10} className="text-brand-secondary shrink-0" />
+src/pages/HomeFeed.tsx:            <span className="text-[9px] md:text-[10px] font-bold text-muted-foreground truncate">{t('home.post.step', { step: post.planStep })}</span>
+src/pages/HomeFeed.tsx:          {post.status && <Badge variant="outline" className="ms-auto text-[8px] h-3.5 border-brand-secondary/20 bg-brand-secondary/10 text-brand-secondary whitespace-nowrap">{post.status}</Badge>}
+src/pages/HomeFeed.tsx:          <p className="text-[10px] md:text-[11px] font-bold font-mono">{post.reach >= 1000 ? `${(post.reach / 1000).toFixed(1)}k` : post.reach}</p>
+src/pages/HomeFeed.tsx:          <p className="text-[10px] md:text-[11px] font-bold font-mono text-primary">{post.engagement}%</p>
+src/pages/HomeFeed.tsx:          <p className="text-[10px] md:text-[11px] font-bold font-mono text-foreground">
+src/pages/HomeFeed.tsx:          <p className="text-[10px] md:text-[11px] font-bold font-mono">{post.shares}</p>
+src/pages/HomeFeed.tsx:        <div className="flex items-start gap-2 p-2 rounded-md bg-primary/5 border border-primary/10">
+src/pages/HomeFeed.tsx:          <p className="text-[9px] md:text-[10px] text-primary leading-tight font-medium italic">{post.aiInsight}</p>
+src/pages/HomeFeed.tsx:              "flex items-center gap-1 text-[10px] font-bold transition-colors",
+src/pages/HomeFeed.tsx:          <button className="flex items-center gap-1 text-[10px] font-bold text-muted-foreground hover:text-foreground transition-colors">
+src/pages/HomeFeed.tsx:              <TooltipContent className="text-[10px] font-bold">{t('home.post.share')}</TooltipContent>
+src/pages/HomeFeed.tsx:    {subtitle && <p className="text-[10px] text-muted-foreground font-medium">{subtitle}</p>}
+src/pages/HomeFeed.tsx:    <div className="absolute -top-4 -end-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+src/pages/HomeFeed.tsx:    <div className="flex justify-between items-start relative z-10">
+src/pages/HomeFeed.tsx:        trend.startsWith("+") ? "bg-brand-secondary/10 text-brand-secondary" : 
+src/pages/HomeFeed.tsx:        trend === "0" ? "bg-muted text-muted-foreground" : "bg-primary/10 text-primary"
+src/pages/HomeFeed.tsx:    <div className="mt-3 relative z-10">
+src/pages/HomeFeed.tsx:      <p className="text-[10px] font-bold text-muted-foreground tracking-wider">{t(label)}</p>
+src/pages/HomeFeed.tsx:      limit(10)
+src/pages/HomeFeed.tsx:            <p className="text-[10px] md:text-[11px] font-bold text-muted-foreground max-w-md">
+src/pages/HomeFeed.tsx:              <SelectTrigger className="flex-1 sm:w-[120px] h-9 text-[10px] font-bold border-border bg-card">
+src/pages/HomeFeed.tsx:            <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 relative z-10">
+src/pages/HomeFeed.tsx:                    <span className="text-[10px] font-bold text-muted-foreground/60 tracking-wider">• {t('home.focus.due', { time: todaysFocus.dueTime })}</span>
+src/pages/HomeFeed.tsx:                    <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground">
+src/pages/HomeFeed.tsx:                  initial={{ opacity: 0, x: -10 }}
+src/pages/HomeFeed.tsx:                  exit={{ opacity: 0, x: 10 }}
+src/pages/HomeFeed.tsx:                                  <Skeleton className="h-10 w-full bg-muted/20" />
+src/pages/HomeFeed.tsx:                        <Card className="p-12 text-center border-dashed border-2 border-border bg-muted/10">
+src/pages/HomeFeed.tsx:                                  <Button variant="outline" className="h-9 text-[10px] font-bold rounded-md">{t('home.insights.open_create')}</Button>
+src/pages/HomeFeed.tsx:                          <div className={cn("ui-icon-chip-primary p-2 text-brand-secondary bg-brand-secondary/10", isAr && "ml-0")}>
+src/pages/HomeFeed.tsx:                          <Badge className="bg-brand-secondary/10 text-brand-secondary text-[8px] h-4 font-bold border-none">Opportunity</Badge>
+src/pages/HomeFeed.tsx:                        <p className="text-[10px] text-muted-foreground leading-relaxed mb-4">{t('home.insights.boost_desc')}</p>
+src/pages/HomeFeed.tsx:                        <Button variant="link" className="p-0 h-4 text-[10px] font-bold text-brand-secondary hover:no-underline">
+src/pages/HomeFeed.tsx:                          <ChevronRight size={10} className={cn(isAr ? "mr-1 rotate-180" : "ml-1")} />
+src/pages/HomeFeed.tsx:                          <div className={cn("ui-icon-chip-primary p-2 text-amber-600 dark:text-amber-400 bg-amber-500/10", isAr && "ml-0")}>
+src/pages/HomeFeed.tsx:                          <Badge className="bg-amber-500/10 text-amber-600 dark:text-amber-400 text-[8px] h-4 font-bold border-none">AI Tip</Badge>
+src/pages/HomeFeed.tsx:                        <p className="text-[10px] text-muted-foreground leading-relaxed mb-4">{t('home.insights.tutorial_desc')}</p>
+src/pages/HomeFeed.tsx:                        <Button variant="link" className="p-0 h-4 text-[10px] font-bold text-amber-600 dark:text-amber-400 hover:no-underline">
+src/pages/HomeFeed.tsx:                          <ChevronRight size={10} className={cn(isAr ? "mr-1 rotate-180" : "ml-1")} />
+src/pages/HomeFeed.tsx:                                <div className="w-10 h-10 rounded-md bg-muted flex items-center justify-center">
+src/pages/HomeFeed.tsx:                                   <p className="text-[10px] text-muted-foreground font-bold">{post.platform} • {t(`common.time.${post.time}`)}</p>
+src/pages/HomeFeed.tsx:                                 <Badge className="bg-primary/10 text-primary text-[8px] h-4 font-bold border-none">{trend.game}</Badge>
+src/pages/HomeFeed.tsx:                                 <p className="text-[10px] text-muted-foreground font-bold">{t('home.trending.trending_on')} {trend.platform}</p>
+src/pages/HomeFeed.tsx:                                 <Button variant="link" className="p-0 h-4 text-[10px] font-bold text-primary">
+src/pages/HomeFeed.tsx:                                   <ArrowUpRight size={10} className={cn(isAr ? "mr-1 rotate-180" : "ml-1")} />
+src/pages/HomeFeed.tsx:                      <span className="text-[10px] font-bold text-muted-foreground tracking-tight">{t('home.pipeline.edit')} CS2 Clip</span>
+src/pages/HomeFeed.tsx:                    <span className="text-[10px] font-bold tracking-tight">{t('home.pipeline.gen')}</span>
+src/pages/HomeFeed.tsx:                  <Badge className="bg-primary/10 text-primary text-[8px] h-4 border-primary/20 font-bold">{t('home.pipeline.ready')}</Badge>
+src/pages/HomeFeed.tsx:                    <span className="text-[10px] font-bold tracking-tight">{t('home.pipeline.schedule')}</span>
+src/pages/HomeFeed.tsx:                     <p className="text-[10px] font-bold text-brand-secondary">{t('home.metrics.streak')}</p>
+src/pages/HomeFeed.tsx:                  <p className="text-[10px] text-muted-foreground font-medium italic leading-relaxed">{t('home.metrics.goal_desc')}</p>
+src/pages/HomeFeed.tsx:                  <p className="text-[10px] text-muted-foreground leading-relaxed italic">{t('home.viral.tip')}</p>
+src/pages/ClipEditor.tsx:  { id: "10", title: "8-Bit Adventure", genre: "Chiptune", artist: "Pixel", cover: "https://picsum.photos/seed/8bit/400/400", url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" },
+src/pages/ClipEditor.tsx:  const waveformData = useRef(Array.from({ length: 100 }, () => 20 + Math.random() * 60)).current;
+src/pages/ClipEditor.tsx:        if (prev >= 100) {
+src/pages/ClipEditor.tsx:          return 100;
+src/pages/ClipEditor.tsx:      setScanningProgress(100);
+src/pages/ClipEditor.tsx:        if (prev >= 100) {
+src/pages/ClipEditor.tsx:          return 100;
+src/pages/ClipEditor.tsx:      setScanningProgress(100);
+src/pages/ClipEditor.tsx:      }, 100);
+src/pages/ClipEditor.tsx:      if (p >= 100) {
+src/pages/ClipEditor.tsx:      if (progress >= 100) {
+src/pages/ClipEditor.tsx:          const elapsed = (Date.now() - startTime) / 1000;
+src/pages/ClipEditor.tsx:          const progress = (elapsed / 15) * 100;
+src/pages/ClipEditor.tsx:        }, 100);
+src/pages/ClipEditor.tsx:              <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2 transition-all shrink-0 ${
+src/pages/ClipEditor.tsx:              <span className={`text-[10px] md:text-sm font-bold whitespace-nowrap ${s.active ? "text-foreground" : "text-muted-foreground"}`}>
+src/pages/ClipEditor.tsx:                className="w-full h-full object-cover opacity-60 transition-transform duration-1000 group-hover:scale-105" 
+src/pages/ClipEditor.tsx:              <div className="absolute top-4 left-4 md:top-6 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+src/pages/ClipEditor.tsx:                  <span className="text-[9px] md:text-[10px] font-bold text-foreground">{t('clip_editor.player.live_preview')}</span>
+src/pages/ClipEditor.tsx:              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/95 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+src/pages/ClipEditor.tsx:                      style={{ width: `${(currentTime / DURATION) * 100}%` }}
+src/pages/ClipEditor.tsx:                        <span className="text-[10px] md:text-xs font-bold font-mono tracking-tighter" aria-current="time">
+src/pages/ClipEditor.tsx:                        <span className="text-[9px] md:text-[10px] font-bold text-foreground/40" aria-hidden="true">/</span>
+src/pages/ClipEditor.tsx:                        <span className="text-[10px] md:text-xs font-bold font-mono tracking-tighter text-foreground/60">
+src/pages/ClipEditor.tsx:                        className="flex items-center gap-1.5 hover:bg-muted rounded-lg text-[9px] md:text-[10px] font-bold tracking-wider text-foreground"
+src/pages/ClipEditor.tsx:                      <p className="text-[10px] text-center text-muted-foreground font-medium tracking-wider leading-relaxed">
+src/pages/ClipEditor.tsx:                    <span className="text-[10px] font-bold">{t('clip_editor.trim.timeline_trimmer')}</span>
+src/pages/ClipEditor.tsx:                          className="gap-2 bg-primary/5 text-primary border-primary/20 hover:bg-primary/10 transition-all text-[10px] font-bold disabled:opacity-50"
+src/pages/ClipEditor.tsx:                          className="gap-2 bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20 hover:bg-brand-secondary/20 transition-all text-[10px] font-bold disabled:opacity-50"
+src/pages/ClipEditor.tsx:                  <span className="text-[9px] md:text-[10px] font-mono font-bold text-muted-foreground w-6 md:w-8 text-center text-primary">
+src/pages/ClipEditor.tsx:                <div className="text-[10px] font-mono text-muted-foreground hidden md:block">
+src/pages/ClipEditor.tsx:                    style={{ width: `${zoomLevel * 100}%` }}
+src/pages/ClipEditor.tsx:                                ? (isPlayed ? "bg-primary/60" : "bg-primary shadow-[0_0_10px_rgba(var(--color-primary),0.3)]") 
+src/pages/ClipEditor.tsx:                        className="absolute inset-y-0 w-px bg-primary/30 z-10 group/marker"
+src/pages/ClipEditor.tsx:                        style={{ left: `${(marker.time / DURATION) * 100}%` }}
+src/pages/ClipEditor.tsx:                        <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 group-hover/marker:opacity-100 transition-opacity pointer-events-none z-50">
+src/pages/ClipEditor.tsx:                          left: `${(suggestedTrim.start / DURATION) * 100}%`, 
+src/pages/ClipEditor.tsx:                          right: `${100 - (suggestedTrim.end / DURATION) * 100}%` 
+src/pages/ClipEditor.tsx:                      className="absolute inset-y-0 bg-primary/10 border-x-2 border-primary/50"
+src/pages/ClipEditor.tsx:                        left: `${(trimStart / DURATION) * 100}%`, 
+src/pages/ClipEditor.tsx:                        right: `${100 - (trimEnd / DURATION) * 100}%` 
+src/pages/ClipEditor.tsx:                        <Clock size={10} className="text-primary" />
+src/pages/ClipEditor.tsx:                      style={{ left: `${(trimStart / DURATION) * 100}%` }}
+src/pages/ClipEditor.tsx:                          "w-10 h-16 md:w-6 md:h-14 bg-primary rounded-md -translate-x-1/2 cursor-ew-resize flex flex-col items-center justify-center shadow-xl transition-all touch-none border-2 border-primary-foreground/20",
+src/pages/ClipEditor.tsx:                          isDragging === "start" ? "scale-110 ring-4 ring-primary/20 brightness-110" : "hover:scale-105"
+src/pages/ClipEditor.tsx:                        <GripVertical size={10} className="text-primary-foreground/80" />
+src/pages/ClipEditor.tsx:                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+src/pages/ClipEditor.tsx:                            exit={{ opacity: 0, y: 10, scale: 0.9 }}
+src/pages/ClipEditor.tsx:                            className="absolute bottom-full mb-4 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-black px-2 py-1.5 rounded-md shadow-[0_10px_30px_rgba(var(--primary),0.4)] border border-primary-strong whitespace-nowrap z-50 flex items-center gap-1.5"
+src/pages/ClipEditor.tsx:                            <Clock size={10} />
+src/pages/ClipEditor.tsx:                      style={{ left: `${(trimEnd / DURATION) * 100}%` }}
+src/pages/ClipEditor.tsx:                          "w-10 h-16 md:w-6 md:h-14 bg-primary rounded-md -translate-x-1/2 cursor-ew-resize flex flex-col items-center justify-center shadow-xl transition-all touch-none border-2 border-primary-foreground/20",
+src/pages/ClipEditor.tsx:                          isDragging === "end" ? "scale-110 ring-4 ring-primary/20 brightness-110" : "hover:scale-105"
+src/pages/ClipEditor.tsx:                        <GripVertical size={10} className="text-primary-foreground/80" />
+src/pages/ClipEditor.tsx:                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+src/pages/ClipEditor.tsx:                            exit={{ opacity: 0, y: 10, scale: 0.9 }}
+src/pages/ClipEditor.tsx:                            className="absolute bottom-full mb-4 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-black px-2 py-1.5 rounded-md shadow-[0_10px_30px_rgba(var(--primary),0.4)] border border-primary-strong whitespace-nowrap z-50 flex items-center gap-1.5"
+src/pages/ClipEditor.tsx:                            <Clock size={10} />
+src/pages/ClipEditor.tsx:                      className="absolute inset-y-0 z-40 w-0.5 bg-primary-foreground shadow-[0_0_10px_rgba(var(--primary-rgb),0.8)] pointer-events-none"
+src/pages/ClipEditor.tsx:                      style={{ left: `${(currentTime / DURATION) * 100}%` }}
+src/pages/ClipEditor.tsx:                    <p className="text-[9px] md:text-[10px] font-bold text-muted-foreground">{t('common.start') || 'Start'}</p>
+src/pages/ClipEditor.tsx:                    <p className="text-[9px] md:text-[10px] font-bold text-muted-foreground">{t('common.end') || 'End'}</p>
+src/pages/ClipEditor.tsx:                  <div className="px-3 py-1.5 md:px-4 md:py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-[10px] md:text-xs font-bold">
+src/pages/ClipEditor.tsx:                <Badge variant="outline" className="bg-primary/5 border-primary/20 text-primary text-[10px] font-black px-3 py-1">
+src/pages/ClipEditor.tsx:                  src="https://picsum.photos/seed/polished/1080/1920" 
+src/pages/ClipEditor.tsx:                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+src/pages/ClipEditor.tsx:                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-foreground/10 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+src/pages/ClipEditor.tsx:                    initial={{ x: "-100%" }}
+src/pages/ClipEditor.tsx:                    className="h-full bg-primary shadow-[0_0_10px_rgba(var(--primary),0.8)]"
+src/pages/ClipEditor.tsx:                <div className="absolute top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 pointer-events-none">
+src/pages/ClipEditor.tsx:                    <span className="text-[10px] font-bold text-foreground">{t('clip_editor.polish.ai_enhanced_preview')}</span>
+src/pages/ClipEditor.tsx:                    <div className="w-10 h-10 rounded-full bg-foreground/20 backdrop-blur-md" />
+src/pages/ClipEditor.tsx:                    <TabsTrigger value="details" className="text-[10px] md:text-[11px] font-bold py-0 h-full data-[state=active]:bg-primary/10 data-[state=active]:text-primary transition-all">
+src/pages/ClipEditor.tsx:                    <TabsTrigger value="meme" className="text-[10px] md:text-[11px] font-bold py-0 h-full data-[state=active]:bg-primary/10 data-[state=active]:text-primary transition-all">
+src/pages/ClipEditor.tsx:                    <TabsTrigger value="audio" className="text-[10px] md:text-[11px] font-bold py-0 h-full data-[state=active]:bg-primary/10 data-[state=active]:text-primary transition-all">
+src/pages/ClipEditor.tsx:                    <TabsTrigger value="enhance" className="text-[10px] md:text-[11px] font-bold py-0 h-full data-[state=active]:bg-primary/10 data-[state=active]:text-primary transition-all">
+src/pages/ClipEditor.tsx:                          <div className="ui-badge bg-primary/5 text-primary border-primary/20 text-[10px] md:text-xs">
+src/pages/ClipEditor.tsx:                          <div className="ui-icon-chip-primary w-8 h-8 md:w-10 md:h-10">
+src/pages/ClipEditor.tsx:                          className="ui-link-primary text-[10px] font-black"
+src/pages/ClipEditor.tsx:                            <label className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.details.context_label')}</label>
+src/pages/ClipEditor.tsx:                            className="h-10 bg-muted/20 border-border rounded-md text-xs font-medium"
+src/pages/ClipEditor.tsx:                              <label className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.details.clip_title')}</label>
+src/pages/ClipEditor.tsx:                                    className="h-auto p-0 flex items-center gap-1.5 text-[10px] font-bold text-primary hover:text-primary/80 hover:bg-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+src/pages/ClipEditor.tsx:                              "text-[10px] font-mono",
+src/pages/ClipEditor.tsx:                            <label className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.details.caption')}</label>
+src/pages/ClipEditor.tsx:                                  className="h-auto p-0 flex items-center gap-1.5 text-[10px] font-bold text-primary hover:text-primary/80 hover:bg-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+src/pages/ClipEditor.tsx:                                <p className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.details.ai_suggestions_label')}</p>
+src/pages/ClipEditor.tsx:                                      className="justify-start h-auto p-3 bg-primary/5 border-primary/10 rounded-md text-xs font-medium text-primary hover:bg-primary/10 transition-all text-left whitespace-normal"
+src/pages/ClipEditor.tsx:                        <Badge variant="outline" className="text-[10px] font-black px-2 py-0.5 border-primary/20 text-primary bg-primary/5">
+src/pages/ClipEditor.tsx:                              <label className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.meme.top_text')}</label>
+src/pages/ClipEditor.tsx:                              className="h-10 text-xs bg-muted/30 border-border/50 rounded-lg focus:border-primary/50"
+src/pages/ClipEditor.tsx:                              <label className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.meme.bottom_text')}</label>
+src/pages/ClipEditor.tsx:                              className="h-10 text-xs bg-muted/30 border-border/50 rounded-lg focus:border-primary/50"
+src/pages/ClipEditor.tsx:                            <label className="text-[10px] font-bold text-muted-foreground ml-1">{t('clip_editor.polish.meme.caption_style')}</label>
+src/pages/ClipEditor.tsx:                              <SelectTrigger className="h-10 text-xs bg-muted/30 border-border/50 rounded-lg">
+src/pages/ClipEditor.tsx:                        <div className="p-4 bg-primary/5 rounded-xl border border-primary/10">
+src/pages/ClipEditor.tsx:                            <p className="text-[10px] font-bold text-foreground">{t('clip_editor.polish.meme.pro_tip')}</p>
+src/pages/ClipEditor.tsx:                            <div className="w-10 h-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center shadow-lg shadow-primary/20">
+src/pages/ClipEditor.tsx:                            <span className="text-[10px] sm:text-xs font-mono font-bold text-primary">{Math.round((isMasterMuted ? 0 : masterVolume) * 100)}%</span>
+src/pages/ClipEditor.tsx:                              className="h-9 w-9 hover:bg-primary/10 rounded-lg"
+src/pages/ClipEditor.tsx:                              <span className="text-[10px] font-mono text-muted-foreground">{Math.round((isClipMuted ? 0 : clipVolume) * 100)}%</span>
+src/pages/ClipEditor.tsx:                              <span className="text-[10px] font-mono text-muted-foreground">{Math.round((isMusicMuted ? 0 : musicVolume) * 100)}%</span>
+src/pages/ClipEditor.tsx:                          <span className="text-[10px] font-bold text-muted-foreground leading-none">{t('clip_editor.polish.audio.sound_library')}</span>
+src/pages/ClipEditor.tsx:                          <span className="text-[10px] font-bold text-primary leading-none">{t('clip_editor.polish.audio.previews')}</span>
+src/pages/ClipEditor.tsx:                                          className="absolute bottom-0 left-0 h-1 bg-foreground/40 z-10"
+src/pages/ClipEditor.tsx:                        <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 text-[10px] font-bold">
+src/pages/ClipEditor.tsx:                            <span className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.enhance.audio_polish')}</span>
+src/pages/ClipEditor.tsx:                                    "w-10 h-10 rounded-lg flex items-center justify-center transition-colors",
+src/pages/ClipEditor.tsx:                                    isNoiseReduced ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary"
+src/pages/ClipEditor.tsx:                                <p className="text-[10px] text-muted-foreground tracking-wider">{t('clip_editor.polish.enhance.voice_isolation')}</p>
+src/pages/ClipEditor.tsx:                              "w-10 h-6 rounded-full relative transition-colors",
+src/pages/ClipEditor.tsx:                            <span className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.enhance.visual_polish')}</span>
+src/pages/ClipEditor.tsx:                                  "text-[10px] font-bold px-2 py-1 rounded transition-colors",
+src/pages/ClipEditor.tsx:                                  isAutoColorEnabled ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-primary"
+src/pages/ClipEditor.tsx:                              max={100}
+src/pages/ClipEditor.tsx:                            <span className="text-[10px] font-bold text-muted-foreground">{t('clip_editor.polish.enhance.transitions_title')}</span>
+src/pages/ClipEditor.tsx:                                className="h-auto p-0 text-[10px] font-bold text-primary hover:bg-transparent"
+src/pages/ClipEditor.tsx:                                    <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary text-[10px] font-bold">
+src/pages/ClipEditor.tsx:                                          <Badge variant="outline" className="text-[8px] bg-primary/5 border-primary/10 text-primary py-0 h-4">
+src/pages/ClipEditor.tsx:                                    className="px-2 text-[9px] font-bold text-primary hover:bg-primary/10"
+src/pages/ClipEditor.tsx:                      <div className="p-4 sm:p-5 bg-primary/5 rounded-xl border border-primary/10 relative overflow-hidden group">
+src/pages/ClipEditor.tsx:                        <div className="absolute -top-2 -right-2 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+src/pages/ClipEditor.tsx:                          <p className="text-[10px] font-bold">{t('clip_editor.polish.enhance.coach_title')}</p>
+src/pages/ClipEditor.tsx:                        <p className="text-[11px] text-muted-foreground leading-relaxed italic relative z-10">
+src/pages/ClipEditor.tsx:              className="fixed inset-0 bg-background/40 backdrop-blur-md z-[100] flex items-center justify-center p-6"
+src/pages/ClipEditor.tsx:                      className="px-6 h-10 text-xs font-bold shadow-lg shadow-primary/20 flex items-center gap-2"
+src/pages/ClipEditor.tsx:              className="fixed inset-0 bg-background/80 backdrop-blur-xl z-[100] flex items-center justify-center p-6"
+src/pages/ClipEditor.tsx:                        "w-10 h-10 rounded-md flex items-center justify-center transition-colors",
+src/pages/ClipEditor.tsx:                        <p className="text-[10px] text-muted-foreground font-medium">{t(s.subtext)}</p>
+src/pages/ClipEditor.tsx:                  <div className="flex justify-between text-[10px] font-bold text-muted-foreground tracking-[0.2em]">
+src/pages/ClipUpload.tsx:      if (p >= 100) {
+src/pages/ClipUpload.tsx:    }, 100);
+src/pages/ClipUpload.tsx:              ? "border-primary bg-primary/5 shadow-lg shadow-primary/10" 
+src/pages/ClipUpload.tsx:            <div className="w-full max-w-md space-y-6 relative z-10 px-4">
+src/pages/ClipUpload.tsx:              <p className="text-[10px] text-muted-foreground font-bold tracking-[0.2em]">Processing frames for editor...</p>
+src/pages/ClipUpload.tsx:            <div className="ui-icon-chip-secondary w-10 h-10 bg-emerald-500/10 text-emerald-500 shrink-0">
+src/pages/ClipUpload.tsx:            <div className="ui-icon-chip-secondary w-10 h-10 bg-amber-500/10 text-amber-500 shrink-0">
+src/pages/Notifications.tsx:    bg: "bg-blue-500/10",
+src/pages/Notifications.tsx:    date: "May 10, 2026",
+src/pages/Notifications.tsx:    bg: "bg-yellow-500/10",
+src/pages/Notifications.tsx:    date: "May 10, 2026",
+src/pages/Notifications.tsx:    bg: "bg-purple-500/10",
+src/pages/Notifications.tsx:    date: "May 10, 2026",
+src/pages/Notifications.tsx:    bg: "bg-green-500/10",
+src/pages/Notifications.tsx:    date: "May 10, 2026",
+src/pages/Notifications.tsx:    description: "You've generated 100 clips! You're now a Power User.",
+src/pages/Notifications.tsx:    bg: "bg-orange-500/10",
+src/pages/Notifications.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/Notifications.tsx:                  "w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-lg transition-transform group-hover:scale-105",
+src/pages/Notifications.tsx:                      <span className="text-[10px] md:text-xs font-medium text-muted-foreground/60 whitespace-nowrap">
+src/pages/Notifications.tsx:                      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+src/pages/PostDetail.tsx:                    <img src="https://picsum.photos/seed/creator/100/100" referrerPolicy="no-referrer" />
+src/pages/PostDetail.tsx:                    <p className="text-[10px] text-muted-foreground font-bold tracking-widest">Valorant • 2h ago</p>
+src/pages/PostDetail.tsx:              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+src/pages/PostDetail.tsx:                    <Heart size={24} className="group-hover:scale-110 transition-transform" />
+src/pages/PostDetail.tsx:                    <MessageSquare size={24} className="group-hover:scale-110 transition-transform" />
+src/pages/PostDetail.tsx:                    <Share2 size={24} className="group-hover:scale-110 transition-transform" />
+src/pages/PostDetail.tsx:        <div className="w-full lg:w-96 flex flex-col ui-card shadow-soft-xl overflow-hidden h-[calc(100vh-160px)]">
+src/pages/PostDetail.tsx:            <h3 className="text-[10px] font-bold text-foreground tracking-widest">Comments (48)</h3>
+src/pages/PostDetail.tsx:                  <img src={`https://picsum.photos/seed/comm${i}/100/100`} referrerPolicy="no-referrer" />
+src/pages/PostDetail.tsx:                  <p className="text-xs font-bold text-foreground">User_{i} <span className="text-[10px] text-muted-foreground font-medium ml-2">1h ago</span></p>
+src/pages/PostDetail.tsx:          <div className="p-6 bg-muted/10 border-t border-border">
+src/pages/AdminPanel.tsx:          <Avatar className="w-10 h-10 border border-border">
+src/pages/AdminPanel.tsx:            <AvatarFallback className="bg-primary/10 text-primary">
+src/pages/AdminPanel.tsx:          "rounded-md text-[10px] font-bold uppercase tracking-widest",
+src/pages/AdminPanel.tsx:          "rounded-md text-[10px] font-bold uppercase tracking-widest",
+src/pages/AdminPanel.tsx:        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+src/pages/AdminPanel.tsx:                  <p className="text-2xl font-black text-foreground tracking-tight">{users.length} <span className="text-[10px] ui-text-mono-label text-muted-foreground ml-1">{t("admin.header.stats_unit")}</span></p>
+src/pages/AdminPanel.tsx:              <Skeleton className="h-10 w-64" />
+src/pages/AdminPanel.tsx:                <Skeleton className="h-10 w-24" />
+src/pages/AdminPanel.tsx:                <Skeleton className="h-10 w-24" />
+src/pages/AdminPanel.tsx:                      <Skeleton className="h-10 w-10 rounded-full" />
+src/pages/AdminPanel.tsx:                      <Skeleton className="h-4 w-10" />
+src/pages/AdminPanel.tsx:              <DialogHeader className="mb-10">
+src/pages/AdminPanel.tsx:                        <Badge variant="outline" className="bg-muted/50 text-muted-foreground border-border font-mono text-[10px] tracking-tight">
+src/pages/AdminPanel.tsx:                    <TabsList className="ui-tabs-list mb-10 w-full grid grid-cols-3">
+src/pages/AdminPanel.tsx:                    <TabsContent value="management" className="space-y-10 animate-in fade-in-50 duration-300 outline-none">
+src/pages/AdminPanel.tsx:                            className="bg-destructive/10 p-6 rounded-xl border border-destructive/20 shadow-inner"
+src/pages/AdminPanel.tsx:                            className="w-full rounded-lg font-bold h-12 bg-destructive/10 text-destructive hover:bg-destructive/20 border border-destructive/10 transition-all"
+src/pages/Home.tsx:        }, 100);
+src/pages/Settings.tsx:  <div className="space-y-10 animate-in fade-in duration-500">
+src/pages/Settings.tsx:  <div className="space-y-10 animate-in fade-in duration-500">
+src/pages/Settings.tsx:              <div className="space-y-10 animate-in fade-in duration-500">
+src/pages/Settings.tsx:              <div className="space-y-10 animate-in fade-in duration-500">
+src/pages/Settings.tsx:                  <div className={cn("absolute top-0 opacity-5 group-hover:opacity-10 transition-opacity p-6", i18n.language === 'ar' ? "left-0" : "right-0")}>
+src/pages/Settings.tsx:                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 relative z-10">
+src/pages/Settings.tsx:                        <Badge variant={profile?.plan === "free" ? "secondary" : "brand-gradient"} className="px-4 py-1 text-[10px] font-black uppercase tracking-widest border-none">
+src/pages/Settings.tsx:                          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{t('settings.billing.status.label')}</p>
+src/pages/Settings.tsx:                          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{t('settings.billing.next_billing')}</p>
+src/pages/Settings.tsx:                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{t('settings.billing.last_12_months')}</p>
+src/pages/Settings.tsx:                            <div className="w-10 h-10 bg-muted/50 rounded-lg flex items-center justify-center text-muted-foreground ring-1 ring-border">
+src/pages/Settings.tsx:                            <button className="text-[10px] font-bold text-primary hover:underline uppercase tracking-widest">{t('settings.billing.download_pdf')}</button>
+src/pages/Settings.tsx:              <div className="space-y-10 animate-in slide-in-from-bottom-2 duration-500">
+src/pages/Settings.tsx:                <div className="p-8 border-2 border-dashed border-destructive/10 rounded-lg bg-destructive/5">
+src/pages/PublicPostView.tsx:            <div className="p-10">
+src/pages/PublicPostView.tsx:                    <img src="https://picsum.photos/seed/creator/100/100" referrerPolicy="no-referrer" />
+src/pages/PublicPostView.tsx:                    <p className="text-[10px] text-muted-foreground font-bold tracking-widest">Valorant • 2h ago</p>
+src/pages/PublicPostView.tsx:              <p className="text-muted-foreground text-xl leading-relaxed mb-10">
+src/pages/PublicPostView.tsx:          <div className="ui-card p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden bg-muted/30">
+src/pages/PublicPostView.tsx:            <div className="relative z-10">
+src/pages/PublicPostView.tsx:              <p className="text-muted-foreground font-medium">Join 10,000+ creators using nxclip.ai to scale their gaming brand.</p>
+src/pages/PublicPostView.tsx:              <Button size="hero" className="font-bold relative z-10 px-8">
+src/pages/EditProfile.tsx:        <div className="flex items-center gap-4 mb-10">
+src/pages/EditProfile.tsx:        <div className="bg-card rounded-lg border border-border p-8 md:p-12 shadow-sm space-y-10">
+src/pages/EditProfile.tsx:              <div className="absolute inset-0 bg-background/40 flex flex-col items-center justify-center text-foreground opacity-0 group-hover:opacity-100 transition-all backdrop-blur-[2px] rounded-full">
+src/pages/EditProfile.tsx:                <span className="text-[10px] font-bold tracking-widest">{t('profile.edit.change_photo')}</span>
+src/pages/EditProfile.tsx:                  "text-[10px] font-bold tracking-widest transition-all duration-300 px-2 py-1 rounded-md",
+src/pages/EditProfile.tsx:                  bio.length >= 200 ? "bg-destructive/10 text-destructive animate-pulse" : 
+src/pages/EditProfile.tsx:                  bio.length >= 160 ? "bg-amber-500/10 text-amber-500" : 
+src/pages/EditProfile.tsx:                <label className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">{t('profile.edit.social_links_label')}</label>
+src/pages/EditProfile.tsx:                <p className="text-[10px] text-muted-foreground/60 font-medium mt-1">{t('profile.edit.social_links_desc')}</p>
+src/pages/EditProfile.tsx:                <label className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">{t('profile.edit.games_label')}</label>
+src/pages/EditProfile.tsx:                <p className="text-[10px] text-muted-foreground/60 font-medium mt-1">{t('profile.edit.games_desc')}</p>
+src/pages/EditProfile.tsx:              <div className={cn("flex flex-wrap gap-2 min-h-[50px] p-4 bg-muted/10 border border-border/50 rounded-xl", isRtl && "flex-row-reverse")}>
+src/pages/EditProfile.tsx:                          "h-8 px-3 py-0 gap-2 bg-primary/10 text-primary border-primary/20 rounded-md font-bold text-[11px]",
+src/pages/EditProfile.tsx:                  <p className="text-[10px] text-muted-foreground ms-1 font-bold tracking-widest uppercase">{t('profile.edit.popular_suggestions')}</p>
+src/pages/EditProfile.tsx:                            "px-3 py-1.5 rounded-full text-[10px] font-bold transition-all border",
+src/pages/EditProfile.tsx:                          {isSelected && <Check size={10} className={cn("inline", isRtl ? "ml-1" : "mr-1")} />}
+src/pages/UserProfile.tsx:                  <p className="text-[10px] font-bold text-muted-foreground tracking-widest uppercase rtl:tracking-normal rtl:normal-case">{t(`profile.stats.${stat.key}`)}</p>
+src/pages/UserProfile.tsx:            <div className="mt-10 text-start">
+src/pages/UserProfile.tsx:                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+src/pages/UserProfile.tsx:                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4">
+src/pages/UserProfile.tsx:                <div className="absolute top-3 right-3 p-1.5 rounded-lg bg-popover/40 backdrop-blur-md border border-border text-foreground opacity-100 group-hover:opacity-0 transition-opacity">
+src/pages/Dashboard.tsx:        <div className="p-2 rounded-md bg-primary/10 text-primary border border-primary/20">
+src/pages/Dashboard.tsx:          trend === "up" ? "bg-brand-secondary/10 text-brand-secondary" : 
+src/pages/Dashboard.tsx:          trend === "down" ? "bg-destructive/10 text-destructive" : "bg-muted text-muted-foreground"
+src/pages/Dashboard.tsx:          "text-[10px] font-bold text-muted-foreground leading-none",
+src/pages/Dashboard.tsx:          "text-[10px] font-bold font-mono",
+src/pages/Dashboard.tsx:         <p className="text-[10px] italic font-medium text-muted-foreground line-clamp-1 leading-normal">{post.insight}</p>
+src/pages/Dashboard.tsx:    {subtitle && <p className="text-[10px] font-bold text-muted-foreground">{subtitle}</p>}
+src/pages/Dashboard.tsx:                <SelectTrigger className="w-[80px] h-9 text-[10px] font-bold bg-card border-border">
+src/pages/Dashboard.tsx:                <SelectTrigger className="w-[120px] h-9 text-[10px] font-bold bg-card border-border">
+src/pages/Dashboard.tsx:                        {isAr ? <ChevronLeft size={10} className="me-1" /> : <ArrowUpRight size={10} className="ms-1" />}
+src/pages/Dashboard.tsx:                    <ResponsiveContainer width="100%" height="100%">
+src/pages/Dashboard.tsx:                        <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "var(--muted-foreground)", fontWeight: 700 }} dy={10} reversed={isAr} />
+src/pages/Dashboard.tsx:                        <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "var(--muted-foreground)", fontWeight: 700 }} orientation={isAr ? "right" : "left"} />
+src/pages/Dashboard.tsx:                           contentStyle={{ backgroundColor: "var(--popover)", borderColor: "var(--border)", borderRadius: "8px", fontSize: "10px", fontWeight: "bold" }}
+src/pages/Dashboard.tsx:                            <img src={content.thumbnail} alt={content.title} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+src/pages/Dashboard.tsx:                           <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+src/pages/Dashboard.tsx:                               <Button variant="secondary" size="sm" className="h-8 text-[10px] font-bold rounded-md ring-1 ring-primary-foreground/10 shadow-xl">
+src/pages/Dashboard.tsx:                            <Badge className={cn("absolute top-2 bg-neutral-950/60 backdrop-blur-md border-primary-foreground/10 text-[8px] h-4 font-bold text-primary-foreground leading-none", isAr ? "right-2" : "left-2")}>
+src/pages/Dashboard.tsx:                                  <span className="text-[10px] font-bold text-brand-secondary">{content.metrics}</span>
+src/pages/Dashboard.tsx:                            <Button variant="ghost" size="sm" className="w-full h-8 text-[10px] font-bold text-primary hover:text-primary hover:bg-primary/5">
+src/pages/Dashboard.tsx:                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+src/pages/Dashboard.tsx:                    <BrainCircuit size={100} />
+src/pages/Dashboard.tsx:                       <p className="text-[10px] font-black opacity-70">{t('dashboard.command.next_best')}</p>
+src/pages/Dashboard.tsx:                                <span className="h-4 w-4 rounded-full bg-primary-foreground/20 flex items-center justify-center text-[10px] shrink-0">{i+1}</span>
+src/pages/Dashboard.tsx:                    <Button className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-black h-10 text-[11px] rounded-md shadow-inner">
+src/pages/Dashboard.tsx:                    <Badge className="bg-brand-secondary/10 text-brand-secondary border-none text-[9px] font-bold">{t('dashboard.progress.on_track')}</Badge>
+src/pages/Dashboard.tsx:                    <Button onClick={() => navigate("/feed")} variant="outline" className="w-full h-9 text-[10px] font-bold">{t('dashboard.progress.open_feed')}</Button>
+src/pages/Dashboard.tsx:                             item.impact === "High" ? "bg-destructive/10 text-destructive" : "bg-amber-500/10 text-amber-500"
+src/pages/Dashboard.tsx:                        <p className="text-[10px] font-medium text-muted-foreground">{item.action}</p>
+src/pages/Dashboard.tsx:              <Card className="p-5 border-none bg-amber-500/10 text-amber-500/80 rounded-xl">
+src/pages/Pricing.tsx:        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] pointer-events-none -z-10">
+src/pages/Pricing.tsx:          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 blur-[120px] rounded-[100%]" />
+src/pages/Pricing.tsx:                    className="text-[10px] uppercase tracking-[0.25em] font-black transition-all data-[active]:bg-neutral-800 data-[active]:text-white data-[active]:shadow-lg text-neutral-500 hover:text-neutral-300"
+src/pages/Pricing.tsx:                    className="text-[10px] uppercase tracking-[0.25em] font-black transition-all data-[active]:bg-neutral-800 data-[active]:text-white data-[active]:shadow-lg text-neutral-500 hover:text-neutral-300"
+src/pages/Pricing.tsx:              <div className="flex items-center gap-2.5 px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[9px] font-black uppercase tracking-[0.15em] animate-pulse-subtle">
+src/pages/Pricing.tsx:                  "relative flex flex-col p-8 sm:p-10 rounded-lg border transition-all duration-300",
+src/pages/Pricing.tsx:                    ? "bg-card border-primary ring-1 ring-primary/20 shadow-xl lg:scale-105 z-10" 
+src/pages/Pricing.tsx:                <div className="mb-10 text-center">
+src/pages/Pricing.tsx:                    "w-16 h-16 rounded-lg flex items-center justify-center mb-10 mx-auto transition-transform hover:rotate-2 duration-500",
+src/pages/Pricing.tsx:                  <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] mb-10">{t(`pricing.plans.${plan.id}.who`)}</p>
+src/pages/Pricing.tsx:                  <p className="text-[10px] text-muted-foreground mt-4 font-bold uppercase tracking-[0.1em] opacity-70">
+src/pages/Pricing.tsx:                      <TableHead className="w-[300px] h-20 px-8 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">{t('pricing.page.capabilities_label')}</TableHead>
+src/pages/Pricing.tsx:                      <TableHead className="text-center h-20 text-[10px] font-black uppercase tracking-[0.3em] text-foreground/70">{t('pricing.plans.starter.name')}</TableHead>
+src/pages/Pricing.tsx:                      <TableHead className="text-center h-20 text-[10px] font-black uppercase tracking-[0.3em] text-primary bg-primary/5">{t('pricing.plans.pro.name')}</TableHead>
+src/pages/Pricing.tsx:                      <TableHead className="text-center h-20 text-[10px] font-black uppercase tracking-[0.3em] text-foreground/70">{t('pricing.plans.studio.name')}</TableHead>
+src/pages/Pricing.tsx:                          <TableCell colSpan={4} className="h-10 px-8 text-[9px] font-black uppercase tracking-[0.4em] text-primary/80">
+src/pages/Pricing.tsx:                  <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+src/pages/Pricing.tsx:                    <Sparkles size={100} className="text-primary" />
+src/pages/Pricing.tsx:                  "w-12 h-12 rounded-lg flex items-center justify-center mb-6 relative z-10",
+src/pages/Pricing.tsx:                    : "bg-primary/10 border border-primary/20 text-primary shadow-sm shadow-primary/5"
+src/pages/Pricing.tsx:                <h3 className="text-lg font-display font-black text-foreground mb-4 uppercase tracking-tight relative z-10">{t(`pricing.recommendations.${i}.name`)}</h3>
+src/pages/Pricing.tsx:                <p className="text-sm font-medium text-muted-foreground leading-relaxed relative z-10">
+src/pages/Pricing.tsx:            <div className="relative z-10">
+src/pages/Login.tsx:      }, 1000);
+src/pages/Login.tsx:        x: [-10, 10, -10, 10, 0],
+src/pages/Login.tsx:        className="w-full max-w-[440px] glass rounded-xl shadow-2xl p-8 md:p-10 border border-border/50 relative overflow-hidden"
+src/pages/Login.tsx:        <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+src/pages/Login.tsx:        <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl pointer-events-none" />
+src/pages/Login.tsx:        <div className="relative z-10">
+src/pages/Login.tsx:          <div className="flex flex-col items-center mb-10">
+src/pages/Login.tsx:              className="w-14 h-14 bg-background rounded-xl flex items-center justify-center mb-6 shadow-lg hover:scale-105 transition-transform border border-border/50 overflow-hidden p-2"
+src/pages/Login.tsx:              className="mb-6 p-4 bg-destructive/10 border border-destructive/20 text-destructive rounded-xl text-sm font-medium flex items-center gap-3"
+src/pages/Login.tsx:                <Link to="/forgot-password" title="Coming soon" className="text-[10px] font-bold text-primary hover:underline uppercase tracking-wider">Forgot password?</Link>
+src/pages/Login.tsx:          <div className="relative my-10">
+src/pages/Login.tsx:            <div className="relative flex justify-center text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground">
+src/pages/Login.tsx:          <p className="mt-10 text-center text-sm text-muted-foreground font-medium">
+src/pages/CreatorCoach.tsx:      limit(10)
+src/pages/CreatorCoach.tsx:    <div className="w-full h-[calc(100vh-120px)] flex flex-col gap-4 relative overflow-hidden mesh-gradient p-2 lg:p-4">
+src/pages/CreatorCoach.tsx:            <span className="text-[10px] font-bold tracking-widest text-brand-secondary">{t('coach.sidebar.history')}</span>
+src/pages/CreatorCoach.tsx:                  initial={{ x: isRtl ? "100%" : "-100%" }}
+src/pages/CreatorCoach.tsx:                  exit={{ x: isRtl ? "100%" : "-100%" }}
+src/pages/CreatorCoach.tsx:                              ? "bg-primary/10 border border-primary/20" 
+src/pages/CreatorCoach.tsx:                  initial={{ x: isRtl ? "-100%" : "100%" }}
+src/pages/CreatorCoach.tsx:                  exit={{ x: isRtl ? "-100%" : "100%" }}
+src/pages/CreatorCoach.tsx:                    <div className="space-y-8 pb-10">
+src/pages/CreatorCoach.tsx:                          <Label className="text-[10px] font-black tracking-widest text-muted-foreground uppercase">{t('coach.dna.sections.identity')}</Label>
+src/pages/CreatorCoach.tsx:                          <Label className="text-[10px] font-black tracking-widest text-muted-foreground uppercase">{t('coach.dna.sections.focus')}</Label>
+src/pages/CreatorCoach.tsx:                          <Label className="text-[10px] font-black tracking-widest text-muted-foreground uppercase">{t('coach.dna.sections.audience_goals')}</Label>
+src/pages/CreatorCoach.tsx:                          <Label className="text-[10px] font-black tracking-widest text-muted-foreground uppercase">{t('coach.dna.sections.consistency')}</Label>
+src/pages/CreatorCoach.tsx:                  <div className="p-6 border-t border-border/5 bg-muted/10 backdrop-blur-md">
+src/pages/CreatorCoach.tsx:                    <p className="text-[10px] font-black tracking-[0.2em] text-muted-foreground/70">{t('coach.sidebar.loading_archive')}</p>
+src/pages/CreatorCoach.tsx:                    <p className="text-[10px] font-black tracking-[0.2em] text-muted-foreground/70">{t('coach.sidebar.no_conversations')}</p>
+src/pages/CreatorCoach.tsx:                      initial={{ opacity: 0, x: -10 }}
+src/pages/CreatorCoach.tsx:                        className="h-7 w-7 opacity-0 group-hover:opacity-100 text-muted-foreground/50 hover:text-destructive hover:bg-destructive/10 rounded-md transition-all"
+src/pages/CreatorCoach.tsx:                  <div className="w-8 h-8 rounded-md bg-amber-500/10 flex items-center justify-center text-amber-500">
+src/pages/CreatorCoach.tsx:                    <p className="text-[10px] font-black tracking-[0.15em] text-foreground italic">
+src/pages/CreatorCoach.tsx:                  <Button asChild size="icon" variant="ghost" className="h-8 w-8 text-primary hover:bg-primary/10">
+src/pages/CreatorCoach.tsx:            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none z-0" />
+src/pages/CreatorCoach.tsx:                  <div className="w-11 h-11 rounded-md bg-primary flex items-center justify-center text-primary-foreground shadow-soft-md shadow-primary/40 relative z-10">
+src/pages/CreatorCoach.tsx:                    <Badge className="bg-primary/10 text-primary border-primary/20 text-[8px] font-black tracking-widest px-1.5 h-4">{t('coach.header.beta')}</Badge>
+src/pages/CreatorCoach.tsx:                    <p className="text-[10px] font-black text-muted-foreground tracking-[0.15em]">{t('coach.header.neural_link')}</p>
+src/pages/CreatorCoach.tsx:                  <p className="text-[10px] font-black text-brand-secondary font-mono">{t('coach.header.latency_value')} <span className="text-muted-foreground/30">±0.4</span></p>
+src/pages/CreatorCoach.tsx:                    <TooltipContent className="bg-popover border-border text-popover-foreground text-[10px] font-bold tracking-widest">{t('coach.header.snapshot_tooltip')}</TooltipContent>
+src/pages/CreatorCoach.tsx:                        <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+src/pages/CreatorCoach.tsx:                    <TooltipContent className="bg-popover border-border text-popover-foreground text-[10px] font-bold tracking-widest">{t('coach.header.dna_tooltip')}</TooltipContent>
+src/pages/CreatorCoach.tsx:                  className="bg-background/50 border-border text-foreground font-black text-[10px] tracking-widest px-4 hover:bg-accent active:scale-95 transition-all hidden sm:flex rounded-md"
+src/pages/CreatorCoach.tsx:            <ScrollArea className="flex-grow min-h-0 relative z-10" onScroll={handleScroll}>
+src/pages/CreatorCoach.tsx:              <div className="p-6 lg:p-10 space-y-10 max-w-4xl mx-auto pb-12">
+src/pages/CreatorCoach.tsx:                      className="fixed bottom-32 right-10 z-50"
+src/pages/CreatorCoach.tsx:                        className="rounded-full h-10 px-4 gap-2 bg-background/80 backdrop-blur-md border border-border shadow-xl hover:bg-primary hover:text-white transition-all group"
+src/pages/CreatorCoach.tsx:                        <span className="text-[10px] font-black tracking-widest uppercase">{t('coach.chat.scroll_to_hub')}</span>
+src/pages/CreatorCoach.tsx:                    <div className="relative mb-10">
+src/pages/CreatorCoach.tsx:                      <div className="w-24 h-24 bg-muted/30 border border-border rounded-lg flex items-center justify-center text-primary relative z-10 backdrop-blur-3xl">
+src/pages/CreatorCoach.tsx:                      <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl" />
+src/pages/CreatorCoach.tsx:                        <p className="text-[10px] font-black tracking-widest text-primary uppercase">{t('coach.onboarding.dna_required')}</p>
+src/pages/CreatorCoach.tsx:                          className="h-8 text-[10px] font-black tracking-widest border-primary/30 hover:bg-primary/10"
+src/pages/CreatorCoach.tsx:                              "flex items-center gap-2 px-4 py-2 rounded-md text-[10px] font-black tracking-widest transition-all",
+src/pages/CreatorCoach.tsx:                            className="px-5 py-3 rounded-lg bg-muted/30 border border-border text-[11px] font-black tracking-widest text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-primary/10 transition-all flex items-center gap-3 group shadow-soft-lg"
+src/pages/CreatorCoach.tsx:                          className="text-[10px] font-black tracking-widest text-muted-foreground/50 hover:text-primary gap-2"
+src/pages/CreatorCoach.tsx:                        "h-10 w-10 flex items-center justify-center rounded-lg shadow-soft-lg relative transition-all duration-500",
+src/pages/CreatorCoach.tsx:                          ? "bg-accent border border-border group-hover:scale-110" 
+src/pages/CreatorCoach.tsx:                          : "bg-primary group-hover:scale-110 shadow-primary/20"
+src/pages/CreatorCoach.tsx:                          "prose prose-sm dark:prose-invert max-w-none prose-headings:font-display prose-headings:font-black prose-headings:italic prose-headings:tracking-tighter prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-code:font-mono prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-strong:text-foreground prose-strong:font-black",
+src/pages/CreatorCoach.tsx:                                className="flex items-center gap-2 text-[10px] font-black tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+src/pages/CreatorCoach.tsx:                      <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary shadow-soft-lg shadow-primary/20 relative z-10 animate-pulse">
+src/pages/CreatorCoach.tsx:                    initial={{ opacity: 0, y: 10 }}
+src/pages/CreatorCoach.tsx:                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+src/pages/CreatorCoach.tsx:                    <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 via-secondary/30 to-tertiary/30 rounded-lg blur-md opacity-0 group-focus-within:opacity-100 transition-opacity duration-500" />
+src/pages/CreatorCoach.tsx:                              : "bg-primary text-primary-foreground shadow-primary/30 hover:scale-105 active:scale-95"
+src/pages/CreatorCoach.tsx:                          <div className="relative z-10">
+src/pages/CreatorCoach.tsx:                    <div className="flex items-center gap-1.5 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all cursor-help">
+src/pages/CreatorCoach.tsx:                    <div className="flex items-center gap-1.5 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all cursor-help">
+src/pages/OwnProfile.tsx:      { key: 'bio', weight: 20, check: () => !!profile.bio && profile.bio.length > 10 },
+src/pages/OwnProfile.tsx:    if (!profile.bio || profile.bio.length <= 10) missing.push(t('profile.missing_fields.bio'));
+src/pages/OwnProfile.tsx:        {completion < 100 && (
+src/pages/OwnProfile.tsx:            initial={{ opacity: 0, y: -10 }}
+src/pages/OwnProfile.tsx:              "absolute top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity",
+src/pages/OwnProfile.tsx:            <div className={cn("flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10", isRtl ? "text-right" : "text-left")}>
+src/pages/OwnProfile.tsx:                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+src/pages/OwnProfile.tsx:                    <p className="text-[10px] font-bold text-primary uppercase tracking-tighter">{t('profile.unlock_features')}</p>
+src/pages/OwnProfile.tsx:                  <div className="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
+src/pages/OwnProfile.tsx:              "absolute bottom-4 md:bottom-6 p-2 md:p-3 bg-popover/20 backdrop-blur-xl text-foreground rounded-md opacity-0 group-hover:opacity-100 transition-all hover:bg-popover/30",
+src/pages/OwnProfile.tsx:                  <button className="absolute inset-0 bg-popover/40 rounded-lg flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all backdrop-blur-[2px]">
+src/pages/OwnProfile.tsx:                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{t(`profile.stats.${stat.key}`)}</p>
+src/pages/OwnProfile.tsx:            <div className={cn("mt-10 space-y-6", isRtl ? "text-right" : "text-left")}>
+src/pages/OwnProfile.tsx:                  <img src={`https://picsum.photos/seed/profile${i}/600/600`} className="w-full h-full object-cover transition-transform group-hover:scale-105" referrerPolicy="no-referrer" />
+src/pages/OwnProfile.tsx:                  <div className="absolute inset-0 bg-popover/40 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center gap-6 text-foreground">
+src/pages/OwnProfile.tsx:                          <Badge variant="secondary" className="text-[10px] uppercase font-bold px-1.5 py-0">
+src/pages/ImageStudio.tsx:    { id: "realistic", label: t('image_studio.style_presets.realistic'), thumbnail: "https://picsum.photos/seed/realistic/100/100" },
+src/pages/ImageStudio.tsx:    { id: "cinematic", label: t('image_studio.style_presets.cinematic'), thumbnail: "https://picsum.photos/seed/cinematic/100/100" },
+src/pages/ImageStudio.tsx:    { id: "cartoon", label: t('image_studio.style_presets.cartoon'), thumbnail: "https://picsum.photos/seed/cartoon/100/100" },
+src/pages/ImageStudio.tsx:    { id: "thumbnail", label: t('image_studio.style_presets.thumbnail'), thumbnail: "https://picsum.photos/seed/thumbnail/100/100" },
+src/pages/ImageStudio.tsx:    { id: "meme", label: t('image_studio.style_presets.meme'), thumbnail: "https://picsum.photos/seed/meme/100/100" },
+src/pages/ImageStudio.tsx:          setGenerationsLeft(data.generationsLeft ?? 10);
+src/pages/ImageStudio.tsx:          setGenerationsLeft(10);
+src/pages/ImageStudio.tsx:  const [brightness, setBrightness] = useState(100);
+src/pages/ImageStudio.tsx:  const [contrast, setContrast] = useState(100);
+src/pages/ImageStudio.tsx:  const [saturation, setSaturation] = useState(100);
+src/pages/ImageStudio.tsx:            generationsLeft: (generationsLeft ?? 10) - 1,
+src/pages/ImageStudio.tsx:      setBrightness(100);
+src/pages/ImageStudio.tsx:      setContrast(100);
+src/pages/ImageStudio.tsx:      setSaturation(100);
+src/pages/ImageStudio.tsx:      <div className="hidden lg:flex flex-row h-[calc(100vh-140px)] gap-4 overflow-hidden">
+src/pages/ImageStudio.tsx:                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary transition-transform group-hover/trigger:scale-110">
+src/pages/ImageStudio.tsx:                    <p className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-bold">{t('image_studio.history.subtitle')}</p>
+src/pages/ImageStudio.tsx:                      className="text-[10px] font-bold text-red-400 hover:text-red-300 hover:bg-red-500/10 uppercase tracking-wider"
+src/pages/ImageStudio.tsx:                      <div className="col-span-full py-20 flex flex-col items-center justify-center border-2 border-dashed border-border/50 rounded-lg bg-muted/10">
+src/pages/ImageStudio.tsx:                        initial={{ opacity: 0, y: 10 }}
+src/pages/ImageStudio.tsx:                            <div className="absolute inset-0 bg-popover/40 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+src/pages/ImageStudio.tsx:                                <span className="text-[10px] font-mono text-muted-foreground">
+src/pages/ImageStudio.tsx:                            className="h-9 text-[10px] gap-2 font-bold uppercase tracking-wider"
+src/pages/ImageStudio.tsx:                            className="h-9 text-[10px] gap-2 font-bold uppercase tracking-wider"
+src/pages/ImageStudio.tsx:            className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl flex items-center justify-center p-6"
+src/pages/ImageStudio.tsx:                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+src/pages/ImageStudio.tsx:            className="fixed inset-0 z-[110] bg-background/80 backdrop-blur-sm flex items-center justify-center p-6"
+src/pages/ImageStudio.tsx:    setShowLeftArrow(scrollLeft > 10);
+src/pages/ImageStudio.tsx:    setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+src/pages/ImageStudio.tsx:    const timer = setTimeout(checkScroll, 100);
+src/pages/ImageStudio.tsx:            className="absolute left-0 z-10 h-7 w-6 bg-gradient-to-r from-card/95 via-card/80 to-transparent flex items-center justify-start pointer-events-auto"
+src/pages/ImageStudio.tsx:              "whitespace-nowrap cursor-pointer hover:bg-primary/20 transition-all text-[10px] py-1 px-3 font-medium border border-border/10 rounded-full lowercase",
+src/pages/ImageStudio.tsx:            className="absolute right-0 z-10 h-7 w-6 bg-gradient-to-l from-card/95 via-card/80 to-transparent flex items-center justify-end pointer-events-auto"
+src/pages/ImageStudio.tsx:            <div className={cn("flex items-center gap-2 px-2 py-1 bg-primary/10 rounded-lg w-fit", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:              <Settings2 size={10} className="text-primary" />
+src/pages/ImageStudio.tsx:              <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">{t('image_studio.config.title')}</Label>
+src/pages/ImageStudio.tsx:                    <TabsTrigger value="image" className="text-[10px]">{t('common.create_image')}</TabsTrigger>
+src/pages/ImageStudio.tsx:                    <TabsTrigger value="meme" className="text-[10px]">{t('common.create_meme')}</TabsTrigger>
+src/pages/ImageStudio.tsx:                  <SelectTrigger className={cn("h-8 text-[10px] bg-muted/30 border-border/50", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:                      <SelectItem key={m.id} value={m.id} className="text-[10px]">
+src/pages/ImageStudio.tsx:                <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{t('image_studio.title_input.label')}</Label>
+src/pages/ImageStudio.tsx:                    className={cn("h-6 text-[8px] font-bold uppercase gap-1.5 text-primary hover:bg-primary/10", isRTL && "flex-row-reverse")}
+src/pages/ImageStudio.tsx:                <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{t('image_studio.prompt.label')}</Label>
+src/pages/ImageStudio.tsx:                      className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-primary/10"
+src/pages/ImageStudio.tsx:                  className={cn("absolute top-2 p-1 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-foreground/10", isRTL ? "left-2" : "right-2")}
+src/pages/ImageStudio.tsx:                "text-[10px] font-mono transition-colors",
+src/pages/ImageStudio.tsx:                  <Zap size={10} className="text-primary" />
+src/pages/ImageStudio.tsx:                  <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{t('image_studio.generations_left.label')}</span>
+src/pages/ImageStudio.tsx:                  "font-mono h-5 text-[10px] border-border/50",
+src/pages/ImageStudio.tsx:                  {generationsLeft ?? 10}/10
+src/pages/ImageStudio.tsx:                className={cn("h-auto p-0 text-[10px] text-primary/70 hover:text-primary font-medium uppercase tracking-tighter", isRTL ? "text-right" : "text-left")}
+src/pages/ImageStudio.tsx:                        <X size={10} />
+src/pages/ImageStudio.tsx:                      <p className="text-[10px] text-foreground/70 line-clamp-2 group-hover:text-foreground">
+src/pages/ImageStudio.tsx:                  className="h-5 w-5 rounded-md hover:bg-primary/10 text-muted-foreground hover:text-primary"
+src/pages/ImageStudio.tsx:                  <RefreshCw size={10} className={cn(isGenerating && "animate-spin")} />
+src/pages/ImageStudio.tsx:                  <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground cursor-pointer group-hover:text-primary transition-colors">{t('image_studio.caption_studio.title')}</Label>
+src/pages/ImageStudio.tsx:                          className={cn("h-6 text-[8px] font-bold uppercase gap-1.5 text-primary hover:bg-primary/10", isRTL && "flex-row-reverse")}
+src/pages/ImageStudio.tsx:              <AccordionTrigger className={cn("py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:no-underline", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:              <AccordionTrigger className={cn("py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:no-underline", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:                            "h-20 flex flex-col gap-2 text-[10px] p-1 overflow-hidden group/preset relative border-border/50 bg-muted/20",
+src/pages/ImageStudio.tsx:                          <div className="w-full h-10 rounded-md overflow-hidden relative">
+src/pages/ImageStudio.tsx:                                "w-full h-full object-cover transition-transform duration-500 group-hover/preset:scale-110",
+src/pages/ImageStudio.tsx:                                style === p.id ? "opacity-100" : "opacity-80 group-hover/preset:opacity-100"
+src/pages/ImageStudio.tsx:                                  <Check size={10} strokeWidth={3} />
+src/pages/ImageStudio.tsx:                      <TooltipContent side="bottom" className="text-[10px]">
+src/pages/ImageStudio.tsx:              <AccordionTrigger className={cn("py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:no-underline", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:                      <Label className="text-[10px] font-bold text-foreground/70">{t('image_studio.advanced.creativity')}</Label>
+src/pages/ImageStudio.tsx:                    <span className="text-[10px] text-muted-foreground font-mono">{creativity[0]}%</span>
+src/pages/ImageStudio.tsx:                    max={100} 
+src/pages/ImageStudio.tsx:                    <Label className="text-[10px] font-bold text-foreground/70">{t('image_studio.advanced.lighting')}</Label>
+src/pages/ImageStudio.tsx:                    <SelectTrigger className={cn("h-9 text-[10px] bg-muted/30 border-border/50", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:                      <SelectItem value="natural" className="text-[10px]">{t('image_studio.advanced.lighting_options.natural')}</SelectItem>
+src/pages/ImageStudio.tsx:                      <SelectItem value="neon" className="text-[10px]">{t('image_studio.advanced.lighting_options.neon')}</SelectItem>
+src/pages/ImageStudio.tsx:                      <SelectItem value="golden" className="text-[10px]">{t('image_studio.advanced.lighting_options.golden')}</SelectItem>
+src/pages/ImageStudio.tsx:                      <SelectItem value="dramatic" className="text-[10px]">{t('image_studio.advanced.lighting_options.dramatic')}</SelectItem>
+src/pages/ImageStudio.tsx:                    <Label className="text-[10px] font-bold text-foreground/70">{t('image_studio.advanced.negative')}</Label>
+src/pages/ImageStudio.tsx:                    className={cn("h-9 text-[10px] bg-muted/30 border-border/50", isRTL && "text-right")}
+src/pages/ImageStudio.tsx:              className="glass border border-border/10 rounded-lg p-4 shadow-2xl backdrop-blur-xl"
+src/pages/ImageStudio.tsx:                  <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/70">{t('image_studio.canvas.quick_adjust')}</Label>
+src/pages/ImageStudio.tsx:                  className="h-6 text-[8px] font-bold uppercase hover:bg-foreground/10 text-foreground/50 hover:text-foreground"
+src/pages/ImageStudio.tsx:                    setBrightness(100);
+src/pages/ImageStudio.tsx:                    setContrast(100);
+src/pages/ImageStudio.tsx:                    setSaturation(100);
+src/pages/ImageStudio.tsx:                initial={{ opacity: 0, y: 10 }}
+src/pages/ImageStudio.tsx:                exit={{ opacity: 0, y: -10 }}
+src/pages/ImageStudio.tsx:                  <div className="relative h-full w-full rounded-lg bg-foreground/5 border border-foreground/10 flex items-center justify-center backdrop-blur-sm shadow-2xl">
+src/pages/ImageStudio.tsx:                      <ImageIcon className="h-10 w-10 md:h-12 md:w-12 text-foreground/20" />
+src/pages/ImageStudio.tsx:                className="text-center max-w-md p-8 rounded-lg bg-destructive/10 border border-destructive/20"
+src/pages/ImageStudio.tsx:                  className="border-destructive/50 text-destructive hover:bg-destructive/10 disabled:opacity-50"
+src/pages/ImageStudio.tsx:                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl opacity-50 group-hover/img:opacity-100 transition-opacity duration-500" />
+src/pages/ImageStudio.tsx:                  className="w-full h-full object-cover rounded-lg border border-border/50 shadow-2xl relative z-10"
+src/pages/ImageStudio.tsx:                  "absolute top-4 flex gap-2 z-20 opacity-100 md:opacity-0 group-hover/img:opacity-100 transition-opacity",
+src/pages/ImageStudio.tsx:                      <Button size="icon" variant="secondary" className="h-9 w-9 rounded-full shadow-lg glass border-border/10" onClick={() => handleDownload(resultImage)}>
+src/pages/ImageStudio.tsx:                      <Button size="icon" variant="secondary" className="h-9 w-9 rounded-full shadow-lg glass border-border/10">
+src/pages/ImageStudio.tsx:            <TabsTrigger value="adjust" className="text-[10px] font-bold">{t('image_studio.edit.tabs.adjust')}</TabsTrigger>
+src/pages/ImageStudio.tsx:            <TabsTrigger value="text" className="text-[10px] font-bold">{t('image_studio.edit.tabs.text')}</TabsTrigger>
+src/pages/ImageStudio.tsx:            <TabsTrigger value="layers" className="text-[10px] font-bold">{t('image_studio.edit.tabs.layers')}</TabsTrigger>
+src/pages/ImageStudio.tsx:                  <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{t('image_studio.edit.adjustments')}</Label>
+src/pages/ImageStudio.tsx:                      setBrightness(100);
+src/pages/ImageStudio.tsx:                      setContrast(100);
+src/pages/ImageStudio.tsx:                      setSaturation(100);
+src/pages/ImageStudio.tsx:                          <Label className="text-[10px] font-bold">{t('image_studio.canvas.brightness')}</Label>
+src/pages/ImageStudio.tsx:                        <span className="text-[10px] text-muted-foreground font-mono">{brightness}%</span>
+src/pages/ImageStudio.tsx:                          <Label className="text-[10px] font-bold">{t('image_studio.canvas.contrast')}</Label>
+src/pages/ImageStudio.tsx:                        <span className="text-[10px] text-muted-foreground font-mono">{contrast}%</span>
+src/pages/ImageStudio.tsx:                          <Label className="text-[10px] font-bold">{t('image_studio.canvas.saturation')}</Label>
+src/pages/ImageStudio.tsx:                        <span className="text-[10px] text-muted-foreground font-mono">{saturation}%</span>
+src/pages/ImageStudio.tsx:                <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{t('image_studio.edit.quick_actions')}</Label>
+src/pages/ImageStudio.tsx:                        className="text-[10px] h-12 flex flex-col gap-1 font-bold border-border/50 hover:border-primary/50"
+src/pages/ImageStudio.tsx:                        className="text-[10px] h-12 flex flex-col gap-1 font-bold border-border/50 hover:border-primary/50"
+src/pages/ImageStudio.tsx:                <Label className="text-[10px] font-bold text-muted-foreground">{t('image_studio.edit.text_layers')}</Label>
+src/pages/ImageStudio.tsx:                      <SelectTrigger className="h-8 text-[10px] bg-background/50 border-border/50">
+src/pages/ImageStudio.tsx:                <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{t('image_studio.edit.presets')}</Label>
+src/pages/ImageStudio.tsx:              <Label className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{t('image_studio.edit.tabs.layers')}</Label>
+src/pages/ImageStudio.tsx:                <div className={cn("flex items-center gap-3 p-3 rounded-xl bg-primary/10 border border-primary/20", isRTL && "flex-row-reverse")}>
+src/pages/ImageStudio.tsx:                  <div className="h-10 w-10 rounded-lg bg-muted overflow-hidden border border-border">
+src/pages/ImageStudio.tsx:                    <p className="text-[10px] font-bold">{t('image_studio.edit.background_layer')}</p>
+src/pages/ImageStudio.tsx:                  <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center border border-border">
+src/pages/ImageStudio.tsx:                    <p className="text-[10px] font-bold">Text Layer 1</p>
+src/pages/ContentLibrary.tsx:  { id: "9", title: "Fortnite Build Battle", type: "clip", status: "published", views: 2100, likes: 340, date: "2024-03-26" },
+src/pages/ContentLibrary.tsx:  { id: "10", title: "Elden Ring Boss Fight", type: "clip", status: "rejected", views: 0, likes: 0, date: "2024-03-27" },
+src/pages/ContentLibrary.tsx:  { id: "12", title: "Warzone Sniper Shot", type: "clip", status: "published", views: 1800, likes: 210, date: "2024-03-29" },
+src/pages/ContentLibrary.tsx:  { id: "15", title: "Overwatch 2 Team Kill", type: "clip", status: "published", views: 2700, likes: 410, date: "2024-04-01" },
+src/pages/ContentLibrary.tsx:  { id: "16", title: "Valorant Funny Moments", type: "clip", status: "published", views: 1100, likes: 95, date: "2024-04-02" },
+src/pages/ContentLibrary.tsx:    published: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+src/pages/ContentLibrary.tsx:    processing: "bg-amber-500/10 text-amber-500 border-amber-500/20",
+src/pages/ContentLibrary.tsx:    rejected: "bg-destructive/10 text-destructive border-destructive/20",
+src/pages/ContentLibrary.tsx:    <Badge variant="outline" className={cn("gap-1.5 font-bold uppercase tracking-widest text-[10px] px-3 py-1", variants[status])}>
+src/pages/ContentLibrary.tsx:                <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+src/pages/ContentLibrary.tsx:                    className="absolute -top-2 -right-2 w-10 h-10 bg-secondary rounded-md flex items-center justify-center text-white shadow-lg"
+src/pages/ContentLibrary.tsx:              <p className="text-muted-foreground font-medium mb-10 leading-relaxed">
+src/pages/ContentLibrary.tsx:                className="px-10 h-14 font-bold shadow-xl shadow-primary/20 group"
+src/components/Features.tsx:      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10 overflow-hidden">
+src/components/Features.tsx:                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+src/components/Features.tsx:                  <div className="inline-flex mb-4 w-fit px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold border border-primary/20">
+src/components/FinalCTA.tsx:      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/10 rounded-full blur-[160px] pointer-events-none -z-10" />
+src/components/FinalCTA.tsx:      <div className="ui-container-landing relative z-10 text-center">
+src/components/Analytics.tsx:          { name: "Avg. Likes", value: "8.2K", change: "+5.2%", icon: Heart, color: "text-destructive", bg: "bg-destructive/10" },
+src/components/Analytics.tsx:            initial={{ opacity: 0, y: 10 }}
+src/components/Analytics.tsx:            <p className="text-muted-foreground text-[10px] font-bold tracking-wider mb-0.5">{stat.name}</p>
+src/components/Analytics.tsx:            <ResponsiveContainer width="100%" height="100%">
+src/components/Analytics.tsx:                    <stop offset="100%" stopColor="var(--chart-2)" />
+src/components/Analytics.tsx:                    <stop offset="100%" stopColor="var(--chart-3)" />
+src/components/Analytics.tsx:                  dy={10}
+src/components/Analytics.tsx:                  labelStyle={{ color: "var(--muted-foreground)", fontSize: "10px", marginBottom: "4px", fontWeight: "bold" }}
+src/components/Analytics.tsx:            <ResponsiveContainer width="100%" height="100%">
+src/components/Analytics.tsx:              <span className="text-xl font-bold text-foreground">100%</span>
+src/components/Analytics.tsx:                style={{ height: `${Math.random() * 100}%` }}
+src/components/ui/HeroParticleWave.tsx:      size: Math.random() * (32 - 10) + 10, // High randomness: 10px to 32px
+src/components/ui/HeroParticleWave.tsx:          initial={{ x: "-10vw", y: `${p.initialY}vh`, opacity: 0 }}
+src/components/ui/HeroParticleWave.tsx:            x: "110vw",
+src/components/ui/HeroParticleWave.tsx:      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+src/components/ui/HeroParticleWave.tsx:      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+src/components/ui/textarea.tsx:        "flex field-sizing-content min-h-20 w-full rounded-xl border border-input bg-background px-3 py-2 text-base transition-all outline-none placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20 disabled:cursor-not-allowed disabled:bg-muted/50 disabled:text-muted-foreground disabled:border-border/50 disabled:opacity-70 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 md:text-sm dark:bg-muted/10 dark:disabled:bg-muted/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
+src/components/ui/slider.tsx:  max = 100,
+src/components/ui/slider.tsx:          className="relative grow overflow-hidden rounded-full bg-white/10 select-none data-horizontal:h-1.5 data-horizontal:w-full data-vertical:h-full data-vertical:w-1.5"
+src/components/ui/dialog.tsx:        "fixed inset-0 isolate z-50 bg-black/10 duration-100 supports-backdrop-filter:backdrop-blur-xs data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0",
+src/components/ui/dialog.tsx:          "fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg bg-popover p-4 text-sm text-popover-foreground border border-border duration-100 outline-none sm:max-w-sm data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95",
+src/components/ui/button.tsx:        "brand-gradient": "text-primary-foreground bg-[linear-gradient(135deg,var(--color-brand-primary)_0%,var(--color-brand-tertiary)_100%)] shadow-[0_4px_15px_color-mix(in_srgb,var(--color-brand-primary)_20%,transparent)] hover:brightness-110 hover:-translate-y-px hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--color-brand-primary)_30%,transparent)]",
+src/components/ui/button.tsx:        "brand-premium": "text-primary-foreground bg-[linear-gradient(135deg,var(--color-brand-primary)_0%,var(--color-brand-tertiary)_100%)] shadow-[0_8px_25px_color-mix(in_srgb,var(--color-brand-primary)_30%,transparent),inset_0_0_0_1px_rgba(255,255,255,0.1)] hover:brightness-110 hover:-translate-0.5 hover:scale-[1.02] hover:shadow-[0_12px_30px_color-mix(in_srgb,var(--color-brand-primary)_40%,transparent),inset_0_0_0_1px_rgba(255,255,255,0.2)]",
+src/components/ui/button.tsx:        destructive: "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30",
+src/components/ui/button.tsx:        xl: "h-10 gap-2 px-5 ui-text-body-md rounded-md",
+src/components/ui/button.tsx:        hero: "h-14 gap-3 px-10 ui-text-card-title rounded-xl shadow-lg",
+src/components/ui/button.tsx:        "icon-xl": "size-10",
+src/components/ui/tabs.tsx:          "relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ring-offset-background outline-none disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 aria-disabled:pointer-events-none aria-disabled:opacity-50 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-active:shadow-sm group-data-[variant=line]/tabs-list:data-active:shadow-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+src/components/ui/tabs.tsx:          "after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-horizontal/tabs:after:inset-x-0 group-data-horizontal/tabs:after:bottom-[-5px] group-data-horizontal/tabs:after:h-0.5 group-data-vertical/tabs:after:inset-y-0 group-data-vertical/tabs:after:-right-1 group-data-vertical/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-active:after:opacity-100",
+src/components/ui/tabs.tsx:        "relative inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-1.5 py-0.5 text-sm font-medium whitespace-nowrap text-foreground/60 transition-all group-data-vertical/tabs:w-full group-data-vertical/tabs:justify-start hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ring-offset-background outline-none disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-1 has-data-[icon=inline-start]:pl-1 aria-disabled:pointer-events-none aria-disabled:opacity-50 dark:text-muted-foreground dark:hover:text-foreground group-data-[variant=default]/tabs-list:data-active:shadow-sm group-data-[variant=line]/tabs-list:data-active:shadow-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+src/components/ui/tabs.tsx:        "after:absolute after:bg-foreground after:opacity-0 after:transition-opacity group-data-horizontal/tabs:after:inset-x-0 group-data-horizontal/tabs:after:bottom-[-5px] group-data-horizontal/tabs:after:h-0.5 group-data-vertical/tabs:after:inset-y-0 group-data-vertical/tabs:after:-right-1 group-data-vertical/tabs:after:w-0.5 group-data-[variant=line]/tabs-list:data-active:after:opacity-100",
+src/components/ui/data-grid.tsx:  pageSize = 10,
+src/components/ui/data-grid.tsx:                className={cn("h-10 bg-card border-border rounded-md w-full focus-visible:ring-primary/20 focus-visible:border-primary/50", isRtl ? "pr-9" : "pl-9")}
+src/components/ui/data-grid.tsx:                <SelectTrigger className="w-full sm:w-[160px] h-10 bg-card border-border rounded-md focus:ring-primary/20 focus:border-primary/50">
+src/components/ui/data-grid.tsx:                className={cn("h-10 px-3 text-muted-foreground hover:text-foreground gap-2", isRtl ? "mr-auto md:mr-0" : "ml-auto md:ml-0")}
+src/components/ui/data-grid.tsx:                    "h-12 text-[10px] font-bold text-muted-foreground uppercase tracking-widest transition-colors whitespace-nowrap",
+src/components/ui/data-grid.tsx:                      "h-8 w-8 sm:h-9 sm:w-9 rounded-md text-[10px] sm:text-xs font-bold shrink-0",
+src/components/ui/avatar.tsx:        "group/avatar relative flex size-8 shrink-0 rounded-full select-none after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 dark:after:mix-blend-lighten",
+src/components/ui/avatar.tsx:        "absolute right-0 bottom-0 z-10 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground bg-blend-color ring-2 ring-background select-none",
+src/components/ui/avatar.tsx:        "relative flex size-8 shrink-0 items-center justify-center rounded-full bg-muted text-sm text-muted-foreground ring-2 ring-background group-has-data-[size=lg]/avatar-group:size-10 group-has-data-[size=sm]/avatar-group:size-6 [&>svg]:size-4 group-has-data-[size=lg]/avatar-group:[&>svg]:size-5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3",
+src/components/ui/popover.tsx:            "z-50 w-72 rounded-lg bg-popover p-4 text-popover-foreground shadow-md border border-border outline-none transition-all duration-100 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95",
+src/components/ui/dropdown-menu.tsx:            "z-50 max-h-(--available-height) w-(--anchor-width) min-w-32 origin-(--transform-origin) overflow-x-hidden overflow-y-auto rounded-lg bg-popover p-1 text-popover-foreground shadow-md border border-border duration-100 outline-none data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:overflow-hidden data-closed:fade-out-0 data-closed:zoom-out-95",
+src/components/ui/dropdown-menu.tsx:        "group/dropdown-menu-item relative flex cursor-default items-center gap-1.5 rounded-md px-1.5 py-1 text-sm outline-hidden select-none focus:bg-accent focus:text-accent-foreground not-data-[variant=destructive]:focus:**:text-accent-foreground data-inset:pl-7 data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:focus:text-destructive dark:data-[variant=destructive]:focus:bg-destructive/20 data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 data-[variant=destructive]:*:[svg]:text-destructive",
+src/components/ui/dropdown-menu.tsx:        "w-auto min-w-[96px] rounded-lg bg-popover p-1 text-popover-foreground shadow-lg border border-border duration-100 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95",
+src/components/ui/form-field.tsx:              "text-[10px] font-bold uppercase tracking-[0.2em] transition-colors",
+src/components/ui/form-field.tsx:          "px-1 text-[10px] font-medium transition-colors",
+src/components/ui/form-field.tsx:            <p className="text-[10px] font-bold uppercase tracking-wider">{error}</p>
+src/components/ui/select.tsx:          "flex w-fit items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+src/components/ui/select.tsx:        "flex w-fit items-center justify-between gap-1.5 rounded-lg border border-input bg-transparent py-2 pr-2 pl-2.5 text-sm whitespace-nowrap transition-colors outline-none select-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 data-placeholder:text-muted-foreground data-[size=default]:h-8 data-[size=sm]:h-7 data-[size=sm]:rounded-[min(var(--radius-md),10px)] *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-1.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+src/components/ui/select.tsx:            "relative isolate z-50 max-h-(--available-height) w-(--anchor-width) min-w-36 origin-(--transform-origin) overflow-x-hidden overflow-y-auto rounded-lg bg-popover text-popover-foreground shadow-md border border-border duration-100 data-[align-trigger=true]:animate-none data-[side=bottom]:slide-in-from-top-2 data-[side=inline-end]:slide-in-from-left-2 data-[side=inline-start]:slide-in-from-right-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-open:animate-in data-open:fade-in-0 data-open:zoom-in-95 data-closed:animate-out data-closed:fade-out-0 data-closed:zoom-out-95",
+src/components/ui/select.tsx:        "top-0 z-10 flex w-full cursor-default items-center justify-center bg-popover py-1 [&_svg:not([class*='size-'])]:size-4",
+src/components/ui/select.tsx:        "bottom-0 z-10 flex w-full cursor-default items-center justify-center bg-popover py-1 [&_svg:not([class*='size-'])]:size-4",
+src/components/ui/table.tsx:        "h-10 px-2 text-left align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0",
+src/components/ui/input.tsx:        "h-9 w-full min-w-0 rounded-xl border border-input bg-background px-3 py-1.5 text-base transition-all outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20 disabled:cursor-not-allowed disabled:bg-muted/50 disabled:text-muted-foreground disabled:border-border/50 disabled:opacity-70 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 md:text-sm dark:bg-muted/10 dark:disabled:bg-muted/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40",
+src/components/ui/alert.tsx:          "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive bg-destructive/10 backdrop-blur-md",
+src/components/ui/alert.tsx:        premium: "border-primary/50 text-primary bg-primary/10 shadow-[0_0_15px_rgba(var(--primary),0.2)]",
+src/components/ui/switch.tsx:        className="pointer-events-none block rounded-full bg-background ring-0 transition-transform group-data-[size=default]/switch:size-4 group-data-[size=sm]/switch:size-3 group-data-[size=default]/switch:data-checked:translate-x-[calc(100%-2px)] group-data-[size=sm]/switch:data-checked:translate-x-[calc(100%-2px)] dark:data-checked:bg-primary-foreground group-data-[size=default]/switch:data-unchecked:translate-x-0 group-data-[size=sm]/switch:data-unchecked:translate-x-0 dark:data-unchecked:bg-foreground"
+src/components/ui/badge.tsx:          "text-primary-foreground bg-[linear-gradient(135deg,var(--color-brand-primary)_0%,var(--color-brand-tertiary)_100%)] border-none",
+src/components/ui/badge.tsx:          "bg-destructive/10 text-destructive focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:focus-visible:ring-destructive/40 [a]:hover:bg-destructive/20",
+src/components/TopBar.tsx:            "pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-background px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100",
+src/components/TopBar.tsx:                    <Badge variant="secondary" className="text-[10px] font-bold px-1.5 py-0 bg-primary/10 text-primary border-none">
+src/components/TopBar.tsx:                              <span className="text-[10px] text-muted-foreground font-medium whitespace-nowrap">{notif.time}</span>
+src/components/TopBar.tsx:                        "w-full items-center gap-2.5 px-2.5 py-1.5 text-[13px] text-red-600 hover:bg-red-500/10 h-auto",
+src/components/MobileNav.tsx:              <span className="text-[10px] font-bold tracking-wider">{translatedLabel}</span>
+src/components/Hero.tsx:          }, 1000);
+src/components/Hero.tsx:        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[160px] opacity-40 animate-pulse" />
+src/components/Hero.tsx:        <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] bg-brand-secondary/15 rounded-full blur-[140px] opacity-30" />
+src/components/Hero.tsx:        <div className="absolute bottom-[-20%] left-1/2 -translate-x-1/2 w-[80%] h-[70%] bg-brand-tertiary/10 rounded-full blur-[180px] opacity-40" />
+src/components/Hero.tsx:      <div className="ui-container-hero relative z-10 w-full">
+src/components/Hero.tsx:              className="absolute top-6 right-6 z-10 bg-popover/80 hover:bg-muted rounded-full text-foreground transition-colors backdrop-blur-xl border border-border"
+src/components/TiktokIcon.tsx:    <path d="M21 8V7l-1.41.14c-2 0-4-1.29-4.32-3.35L15 3h-4v10a4 4 0 1 1-6-3h1V7h-1a6 6 0 1 0 5 10.31V7a7 7 0 0 0 4.19 2.22l.27.04A6 6 0 0 0 21 8Z" />
+src/components/UserProfileView.tsx:              <button className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl text-white">
+src/components/UserProfileView.tsx:                  <div className="ui-badge bg-primary text-white border-none text-[10px] font-bold rounded tracking-widest flex items-center gap-1">
+src/components/UserProfileView.tsx:                    <Sparkles size={10} fill="currentColor" />
+src/components/UserProfileView.tsx:              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
+src/components/UserProfileView.tsx:                    <p className="text-[10px] text-muted-foreground font-bold tracking-widest">{stat.label}</p>
+src/components/UserProfileView.tsx:                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+src/components/UserProfileView.tsx:                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-2 text-center">
+src/components/ErrorBoundary.tsx:              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -mr-16 -mt-16 rounded-full group-hover:bg-primary/10 transition-colors" />
+src/components/ErrorBoundary.tsx:                <div className="w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center mb-8 border border-destructive/20 rotate-3 group-hover:rotate-0 transition-transform">
+src/components/ErrorBoundary.tsx:                <p className="text-muted-foreground mb-10 leading-relaxed font-medium">
+src/components/ErrorBoundary.tsx:                    className="h-12 gap-3 font-bold bg-white/5 border-white/10 hover:bg-white/10 text-white rounded-xl"
+src/components/ErrorBoundary.tsx:                    <p className="font-mono text-[10px] text-destructive/80 mb-3 font-black uppercase tracking-[0.2em]">Diagnostic Data</p>
+src/components/Testimonials.tsx:      avatar: "https://picsum.photos/seed/alex/100/100",
+src/components/Testimonials.tsx:      avatar: "https://picsum.photos/seed/sarah/100/100",
+src/components/Testimonials.tsx:      avatar: "https://picsum.photos/seed/marcus/100/100",
+src/components/Testimonials.tsx:    <section id="testimonials" className="ui-landing-section bg-muted/10">
+src/components/Testimonials.tsx:      <div className="ui-container-landing relative z-10">
+src/components/Testimonials.tsx:          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+src/components/Testimonials.tsx:          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+src/components/Testimonials.tsx:                    <Star key={i} size={14} className="text-primary fill-primary/10" />
+src/components/Testimonials.tsx:                <p className="text-base text-foreground/90 font-medium leading-relaxed mb-10 flex-grow">
+src/components/Testimonials.tsx:                    <div className="text-[10px] text-muted-foreground font-bold tracking-widest flex items-center gap-2">
+src/components/Testimonials.tsx:      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[50%] bg-primary/5 rounded-full blur-[140px] -z-10" />
+src/components/TrustMetrics.tsx:        <span className="text-[10px] font-bold text-neutral-500 tracking-[0.4em] whitespace-nowrap mr-12 shrink-0 select-none">
+src/components/TrustMetrics.tsx:                  className="group flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity duration-500 cursor-default shrink-0 select-none"
+src/components/Navbar.tsx:                    ? "bg-primary/10 text-primary hover:bg-primary/15 hover:text-primary shadow-sm shadow-primary/5" 
+src/components/Navbar.tsx:              initial={{ opacity: 0, scale: 0.95, y: -10 }}
+src/components/Navbar.tsx:              exit={{ opacity: 0, scale: 0.95, y: -10 }}
+src/components/Navbar.tsx:                        isActive ? "bg-primary/10 text-primary" : "hover:bg-muted/50"
+src/components/Navbar.tsx:                        initial={{ opacity: 0, x: -10 }}
+src/components/Navbar.tsx:                            isActive ? "text-primary translate-x-0 opacity-100" : "text-muted-foreground opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0"
+src/components/Navbar.tsx:                            isActive ? "text-primary translate-x-0 opacity-100" : "text-muted-foreground opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0"
+src/components/Navbar.tsx:                      <img src={user.photoURL || undefined} className="w-10 h-10 rounded-full border border-border" referrerPolicy="no-referrer" />
+src/components/Navbar.tsx:                        <span className="text-[10px] text-muted-foreground font-bold">{t('nav.creator')}</span>
+src/components/Navbar.tsx:                        className="rounded-lg h-10 font-bold text-xs bg-muted/50"
+src/components/Navbar.tsx:                        className="rounded-lg h-10 font-bold text-xs text-muted-foreground"
+src/components/Navbar.tsx:                    initial={{ opacity: 0, y: 10 }}
+src/components/HomeFeed.tsx:    avatar: "https://picsum.photos/seed/ninja/100/100", 
+src/components/HomeFeed.tsx:    avatar: "https://picsum.photos/seed/poki/100/100", 
+src/components/HomeFeed.tsx:    image: "https://picsum.photos/seed/setup/800/1000", 
+src/components/HomeFeed.tsx:    avatar: "https://picsum.photos/seed/shroud/100/100", 
+src/components/HomeFeed.tsx:    avatar: "https://picsum.photos/seed/rae/100/100", 
+src/components/HomeFeed.tsx:    if (str.includes('K')) return Math.floor(num * 1000);
+src/components/HomeFeed.tsx:    if (str.includes('M')) return Math.floor(num * 1000000);
+src/components/HomeFeed.tsx:    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+src/components/HomeFeed.tsx:    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+src/components/HomeFeed.tsx:      initial={{ opacity: 0, y: 10 }}
+src/components/HomeFeed.tsx:          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+src/components/HomeFeed.tsx:          <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-colors">
+src/components/HomeFeed.tsx:            <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white">
+src/components/HomeFeed.tsx:          <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+src/components/HomeFeed.tsx:              <ExternalLink size={10} />
+src/components/HomeFeed.tsx:              <MessageCircle size={16} className="group-hover/btn:scale-110 transition-transform" />
+src/components/HomeFeed.tsx:            whileHover={{ scale: 1.1, rotate: 10 }}
+src/components/HomeFeed.tsx:            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+src/components/HomeFeed.tsx:          <div className="flex items-center gap-2 mb-6 relative z-10">
+src/components/HomeFeed.tsx:          <div className="text-center relative z-10">
+src/components/HomeFeed.tsx:                <Sparkles size={10} fill="currentColor" />
+src/components/HowItWorks.tsx:      bg: "bg-primary/10",
+src/components/HowItWorks.tsx:      bg: "bg-secondary/10",
+src/components/HowItWorks.tsx:      bg: "bg-amber-500/10",
+src/components/HowItWorks.tsx:          <div className="hidden lg:block absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-border/50 to-transparent -z-10" />
+src/components/HowItWorks.tsx:                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary transition-transform group-hover:scale-110">
+src/components/HowItWorks.tsx:      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 rounded-full blur-[140px] -z-10 opacity-30" />
+src/components/Logo.tsx:  iconSize = "w-10 h-10", 
+src/components/ProductShowcase.tsx:      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+src/components/ProductShowcase.tsx:        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-primary/10 rounded-full blur-[160px] opacity-40" />
+src/components/ProductShowcase.tsx:        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-secondary/5 rounded-full blur-[120px] opacity-20" />
+src/components/ProductShowcase.tsx:      <div className="ui-container-landing relative z-10">
+src/components/ProductShowcase.tsx:          <h2 className="ui-landing-title mb-10">
+src/components/ProductShowcase.tsx:                  <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg shadow-soft-xl">
+src/components/ProductShowcase.tsx:                          ? "bg-primary/10 text-primary shadow-soft-lg shadow-primary/5 border border-primary/50" 
+src/components/ProductShowcase.tsx:                  <div className="text-[10px] font-bold text-muted-foreground tracking-widest mb-3">VRAM Capacity</div>
+src/components/ProductShowcase.tsx:                  <div className="flex justify-between items-center text-[10px] font-bold">
+src/components/ProductShowcase.tsx:                    <span className="text-muted-foreground text-xs font-mono">8.2 / 10 GB</span>
+src/components/ProductShowcase.tsx:              <div className="flex-grow p-10 overflow-hidden bg-muted/5">
+src/components/ProductShowcase.tsx:                    <p className="text-[10px] text-muted-foreground font-bold tracking-widest opacity-70">{t('showcase.pulse.subtitle')}</p>
+src/components/ProductShowcase.tsx:                      <Button variant="ghost" size="sm" className="h-8 rounded-lg text-[10px] font-bold bg-background border border-border">30d</Button>
+src/components/ProductShowcase.tsx:                      <Button variant="ghost" size="sm" className="h-8 rounded-lg text-[10px] font-bold text-muted-foreground">90d</Button>
+src/components/ProductShowcase.tsx:                    { label: t('showcase.stats.score'), value: "94/100", trend: "+2.1%", color: "text-brand-secondary" },
+src/components/ProductShowcase.tsx:                      <div className={cn("text-[10px] font-bold italic h-4 flex items-center gap-1.5", stat.color)}>
+src/components/ProductShowcase.tsx:                  <div className="p-10 bg-card/50 backdrop-blur-xl rounded-lg border border-border h-80 flex flex-col group">
+src/components/ProductShowcase.tsx:                  <div className="p-10 bg-card/50 backdrop-blur-xl rounded-lg border border-border h-80 flex flex-col">
+src/components/ProductShowcase.tsx:                      <Badge className="bg-primary/10 text-primary border-primary/20 text-[9px] font-bold px-3">Active</Badge>
+src/components/ProductShowcase.tsx:                      <div className="flex items-center gap-4 p-4 rounded-lg bg-primary/10 border border-primary/50">
+src/components/ProductShowcase.tsx:                        <div className="w-10 h-10 rounded-lg bg-primary/20 overflow-hidden border border-primary/30 flex items-center justify-center">
+src/components/ProductShowcase.tsx:                          <div className="h-1.5 w-full bg-primary rounded-full overflow-hidden shadow-[0_0_10px_rgba(var(--primary),0.5)]" />
+src/components/ProductShowcase.tsx:                            <div className="text-[9px] text-muted-foreground font-bold font-mono">100%</div>
+src/components/ProductShowcase.tsx:                        <div className="w-10 h-10 rounded-lg bg-primary/10 overflow-hidden border border-border flex items-center justify-center">
+src/components/ProductShowcase.tsx:                              animate={{ x: ["-100%", "100%"] }} 
+src/components/ProductShowcase.tsx:              <div className="w-10 h-10 rounded-lg bg-brand-secondary/10 flex items-center justify-center text-brand-secondary">
+src/components/ProductShowcase.tsx:              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+src/components/DashboardTour.tsx:        return { initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 } };
+src/components/DashboardTour.tsx:    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-hidden selection:bg-primary/20 selection:text-primary">
+src/components/DashboardTour.tsx:            <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+src/components/DashboardTour.tsx:            <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-tertiary/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+src/components/DashboardTour.tsx:        className="relative z-[110] w-full max-w-[480px] pointer-events-auto"
+src/components/DashboardTour.tsx:          <div className="absolute inset-0 mesh-gradient opacity-10 pointer-events-none" />
+src/components/DashboardTour.tsx:          <div className="h-1.5 w-full bg-muted/20 relative z-10">
+src/components/DashboardTour.tsx:              animate={{ width: `${((currentStep + 1) / TOUR_STEPS.length) * 100}%` }}
+src/components/DashboardTour.tsx:          <CardContent className="p-0 relative z-10">
+src/components/DashboardTour.tsx:                <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-primary/10 text-primary border border-primary/20">
+src/components/DashboardTour.tsx:                  <span className="text-[10px] font-black tracking-[0.2em] text-primary/80 leading-none mb-1">
+src/components/DashboardTour.tsx:            <div className="flex flex-col items-center text-center px-10 py-10">
+src/components/DashboardTour.tsx:                className="relative mb-10 group"
+src/components/DashboardTour.tsx:                <div className="w-24 h-24 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground shadow-2xl relative z-10">
+src/components/DashboardTour.tsx:                  <step.icon size={42} className={cn("transition-all duration-700 group-hover:scale-110 group-hover:rotate-3", step.animation === "glow" && "animate-pulse")} />
+src/components/DashboardTour.tsx:                    <span className="relative z-10 flex items-center gap-3">
+src/components/DashboardTour.tsx:                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+src/components/DashboardTour.tsx:                  <p className="text-[10px] font-bold text-muted-foreground/40 tracking-[0.2em]">
+src/components/DashboardTour.tsx:              initial={{ opacity: 0, y: 10 }}
+src/components/DashboardTour.tsx:              <div className="text-[10px] font-black text-primary/80 tracking-[0.3em] flex items-center gap-3">
+src/components/SideNav.tsx:        <TooltipContent side={i18n.language === 'ar' ? "left" : "right"} className="font-bold text-[10px] tracking-widest">
+src/components/SideNav.tsx:                className="hover:scale-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ring-offset-card rounded-md" // Disable Link scaling here as Tooltip handles focus
+src/components/SideNav.tsx:                <span className="ms-auto text-[9px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
+src/components/SideNav.tsx:          <TooltipContent side={i18n.language === 'ar' ? "left" : "right"} className="font-bold text-[10px] tracking-widest">
+src/components/SideNav.tsx:              <p className="px-3 text-[10px] font-bold text-muted-foreground tracking-widest">{t('nav.tools')}</p>
+src/components/SideNav.tsx:              <p className="px-3 text-[10px] font-bold text-muted-foreground tracking-widest">{t('nav.insights')}</p>
+src/components/SideNav.tsx:          <TooltipContent side="right" className="font-bold text-[10px] tracking-widest">
+src/components/SideNav.tsx:          <TooltipContent side="right" className="font-bold text-[10px] tracking-widest">
+src/components/SideNav.tsx:            <TooltipContent side="right" className="font-bold text-[10px] tracking-widest">
+src/components/SideNav.tsx:          <TooltipContent side="right" className="font-bold text-[10px] tracking-widest">
+src/components/SideNav.tsx:            initial={{ opacity: 0, y: 10 }}
+src/components/SideNav.tsx:            className="mb-4 p-3 bg-primary/10 border border-primary/20 rounded-lg space-y-2"
+src/components/SideNav.tsx:              <p className="text-[10px] font-bold tracking-wider">{t('nav.growth_tip.title')}</p>
+src/components/SideNav.tsx:              className="block w-full py-1.5 bg-primary text-white text-[10px] font-bold text-center rounded tracking-widest hover:bg-primary/90 transition-all"
+src/components/SideNav.tsx:              <p className="text-[10px] text-muted-foreground truncate font-medium">
+src/components/CreatorSpotlight.tsx:      <div className="ui-container-landing relative z-10">
+src/components/CreatorSpotlight.tsx:            initial={{ opacity: 0, y: -10 }}
+src/components/CreatorSpotlight.tsx:              className="ui-glass-card group flex flex-col p-4 rounded-xl border-border/5 h-full bg-card/10 backdrop-blur-md"
+src/components/CreatorSpotlight.tsx:                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+src/components/CreatorSpotlight.tsx:                    <span className="text-[10px] font-bold tracking-[0.2em] text-white/90 uppercase">{t(`spotlight.creators.${creator.id}.niche`)}</span>
+src/components/CreatorSpotlight.tsx:                  <div className="absolute top-4 end-4 opacity-0 group-hover:opacity-100 transition-opacity">
+src/components/CreatorSpotlight.tsx:                <div className="mt-auto pt-6 border-t border-border/10 flex items-center justify-between">
+src/components/CreatorSpotlight.tsx:                  <BadgeCheck size={16} className="text-primary fill-primary/10" />
+src/components/CreatorSpotlight.tsx:      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+src/components/PhotoUploadDialog.tsx:                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+src/components/PhotoUploadDialog.tsx:                <span className="text-[10px] font-black tracking-widest uppercase">Take Photo</span>
+src/components/PhotoUploadDialog.tsx:                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+src/components/PhotoUploadDialog.tsx:                <span className="text-[10px] font-black tracking-widest uppercase">Upload File</span>
+src/components/PhotoUploadDialog.tsx:                  className="h-10 w-10 rounded-full"
+src/components/PhotoUploadDialog.tsx:                  <div className="w-12 h-12 rounded-full border-2 border-black/10" />
+src/components/PhotoUploadDialog.tsx:                <div className="w-10" /> {/* Spacer */}
+src/components/PhotoUploadDialog.tsx:                <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-full" />
+src/components/Pricing.tsx:      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none -z-10">
+src/components/Pricing.tsx:      <div className="ui-container-landing relative z-10">
+src/components/Pricing.tsx:                  ? "bg-card border-primary shadow-xl shadow-primary/5 md:scale-105 z-10" 
+src/components/Pricing.tsx:                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-primary text-primary-foreground text-[10px] font-bold tracking-[0.2em] rounded-full shadow-xl">
+src/components/Pricing.tsx:                  "w-10 h-10 rounded-lg flex items-center justify-center mb-6",
+src/components/Pricing.tsx:                  <p className="text-[10px] text-muted-foreground mt-1 font-medium">{t('pricing.billing_annually')} ${plan.priceYearly * 12}</p>
+src/components/Pricing.tsx:                  <p className="text-[10px] text-muted-foreground mt-1 font-medium">{plan.priceMonthly === 0 ? t('pricing.infinite_potential') : t('pricing.billed_monthly')}</p>
+src/components/Pricing.tsx:              <ul className="space-y-4 mb-10 flex-grow">
+src/components/AppShell.tsx:        className="sr-only focus:not-sr-only focus:fixed focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:m-4 focus:outline-none focus:ring-2 focus:ring-white"
+src/components/CreatorAvatar.tsx:      <AvatarFallback className="bg-muted text-[10px] font-bold">
+src/components/CreatePostDialog.tsx:  { name: "Grayscale", filter: "grayscale(100%)" },
+src/components/CreatePostDialog.tsx:  { name: "Sepia", filter: "sepia(100%)" },
+src/components/CreatePostDialog.tsx:  { name: "Invert", filter: "invert(100%)" },
+src/components/CreatePostDialog.tsx:  const [trimRange, setTrimRange] = useState([0, 100]);
+src/components/CreatePostDialog.tsx:      setTrimRange([0, 100]);
+src/components/CreatePostDialog.tsx:      const startTime = (trimRange[0] / 100) * duration;
+src/components/CreatePostDialog.tsx:      const endTime = (trimRange[1] / 100) * duration;
+src/components/CreatePostDialog.tsx:        videoRef.current.currentTime = (val[0] / 100) * duration;
+src/components/CreatePostDialog.tsx:    setTrimRange([0, 100]);
+src/components/CreatePostDialog.tsx:                  className="bg-destructive/10 border border-destructive/20 rounded-lg p-3 flex items-start gap-3"
+src/components/CreatePostDialog.tsx:                    className="h-6 w-6 ml-auto shrink-0 text-destructive hover:bg-destructive/10" 
+src/components/CreatePostDialog.tsx:                      "text-[10px] font-bold text-muted-foreground uppercase leading-none",
+src/components/CreatePostDialog.tsx:                        "h-7 text-[9px] font-bold text-primary hover:bg-primary/10 gap-1.5",
+src/components/CreatePostDialog.tsx:                    className="min-h-[100px] resize-none border-border focus-visible:ring-primary rounded-lg"
+src/components/CreatePostDialog.tsx:                    "text-[10px] font-bold text-muted-foreground leading-none",
+src/components/CreatePostDialog.tsx:                  "text-[10px] font-bold text-muted-foreground leading-none",
+src/components/CreatePostDialog.tsx:                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
+src/components/CreatePostDialog.tsx:                        className="absolute top-2 right-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10 focus-visible:opacity-100"
+src/components/CreatePostDialog.tsx:                        <TabsTrigger value="filters" className="gap-2 text-[10px] font-bold rounded-lg data-[state=active]:bg-card shadow-sm">
+src/components/CreatePostDialog.tsx:                        <TabsTrigger value="text" className="gap-2 text-[10px] font-bold rounded-lg data-[state=active]:bg-card shadow-sm">
+src/components/CreatePostDialog.tsx:                        <TabsTrigger value="trim" className="gap-2 text-[10px] font-bold rounded-lg data-[state=active]:bg-card shadow-sm" disabled={mediaType !== "video"}>
+src/components/CreatePostDialog.tsx:                      <TabsContent value="filters" className="pt-5 translate-y-0 opacity-100 animate-in fade-in slide-in-from-top-2">
+src/components/CreatePostDialog.tsx:                                  activeFilter === f.filter ? "border-primary scale-110 shadow-lg shadow-primary/20" : "border-border/60 group-hover:border-primary/40 group-hover:scale-105"
+src/components/CreatePostDialog.tsx:                          <Label htmlFor="overlay-text" className="text-[10px] font-bold tracking-widest text-muted-foreground">
+src/components/CreatePostDialog.tsx:                              <Label htmlFor="trim-slider" className="text-[10px] font-bold tracking-widest text-muted-foreground">
+src/components/CreatePostDialog.tsx:                                <span className={cn("text-[10px] font-mono font-bold text-primary bg-primary/10 px-2 py-0.5 rounded", isAr && "dir-ltr")}>
+src/components/CreatePostDialog.tsx:                                  {formatTime((trimRange[0] / 100) * duration)} - {formatTime((trimRange[1] / 100) * duration)}
+src/components/CreatePostDialog.tsx:                                <span className="text-[10px] font-mono text-muted-foreground">
+src/components/CreatePostDialog.tsx:                                  ({Math.round(((trimRange[1] - trimRange[0]) / 100) * duration)}s)
+src/components/CreatePostDialog.tsx:                              max={100}
+src/components/CreatePostDialog.tsx:                              <p className="text-[10px] text-muted-foreground">
+src/components/CreatePostDialog.tsx:                                onClick={() => handleTrimChange([0, 100])}
+src/components/CreatePostDialog.tsx:                                className="h-6 text-[9px] font-bold tracking-widest hover:bg-primary/10 text-primary"
+src/components/CreatePostDialog.tsx:                    className="bg-destructive/10 border border-destructive/20 rounded-lg p-4 flex items-start gap-3"
+src/components/CreatePostDialog.tsx:                      className="h-8 w-8 ml-auto shrink-0 text-destructive hover:bg-destructive/10" 
+src/components/CreatePostDialog.tsx:                    <div className="ui-icon-chip-primary w-10 h-10 shadow-lg shadow-primary/20">
+src/components/CreatePostDialog.tsx:                        "text-[10px] text-muted-foreground font-bold",
+src/components/CreatePostDialog.tsx:                            initial={{ opacity: 0, x: -10 }}
+src/components/CreatePostDialog.tsx:                              <div className="ui-icon-chip-primary w-8 h-8 text-[10px] font-bold flex-shrink-0">
+src/components/CreatePostDialog.tsx:        <DialogFooter className="p-6 border-t border-border bg-card/10 backdrop-blur-xl flex-shrink-0">
+src/components/CreatePostDialog.tsx:                  "font-bold uppercase text-[10px] h-9 px-6",
+src/components/CreatePostDialog.tsx:                    "font-bold uppercase text-[10px] h-9 px-8 bg-foreground text-background hover:opacity-90 transition-all shadow-xl shadow-foreground/10",
+src/components/CreatePostDialog.tsx:                  className="font-bold uppercase tracking-widest text-[10px] h-9 px-8 shadow-xl shadow-foreground/10"
+src/components/CreatePostDialog.tsx:          <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-primary/20 blur-[120px] rounded-full" />
+src/components/CreatePostDialog.tsx:          <div className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-brand-secondary/20 blur-[120px] rounded-full" />
+src/components/CreatePostDialog.tsx:        <div className="relative w-full max-w-[280px] aspect-[9/17.5] bg-black rounded-[40px] border-[8px] border-black shadow-2xl overflow-hidden ring-1 ring-white/10">
+src/components/CreatePostDialog.tsx:                  <div className="w-10 h-10 rounded-full border-2 border-white/80 bg-muted/20 flex items-center justify-center overflow-hidden relative shadow-lg">
+src/components/CreatePostDialog.tsx:                       <Plus size={10} strokeWidth={4} />
+src/components/CreatePostDialog.tsx:                    <span className="text-[10px] font-bold text-white drop-shadow-md">11.2K</span>
+src/components/CreatePostDialog.tsx:                    <span className="text-[10px] font-bold text-white drop-shadow-md">482</span>
+src/components/CreatePostDialog.tsx:                      <Check size={10} className="bg-primary text-primary-foreground rounded-full p-0.5" />
+src/components/CreatePostDialog.tsx:                        <span key={i} className={cn("text-[10px] font-bold text-primary", isAr ? "ml-1" : "mr-1")}>
+src/components/CreatePostDialog.tsx:                       <Music size={10} className="text-white/80 animate-spin" style={{ animationDuration: '4s' }} />
+src/components/CreatePostDialog.tsx:                <div className="w-16 h-16 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center text-white/10">
+src/components/CreatePostDialog.tsx:                  "text-[10px] font-black text-white/20 uppercase leading-relaxed",
+src/components/CreatePostDialog.tsx:              <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary shadow-sm">
+src/components/CreatePostDialog.tsx:                 <p className="text-[10px] font-bold text-foreground">{t('create_post.preview.polish_active')}</p>
+src/components/Footer.tsx:      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[30%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10 opacity-50" />
+src/components/Footer.tsx:      <div className="ui-container-landing relative z-10">
+src/components/Footer.tsx:              iconSize="w-10 h-10" 
+src/components/Footer.tsx:            <p className="text-lg text-muted-foreground max-w-sm mb-10 font-medium leading-relaxed">
+src/components/Footer.tsx:                    "w-10 h-10 flex items-center justify-center border border-border rounded-lg transition-all",
+src/components/Footer.tsx:                      ? "bg-foreground/10 text-foreground border-foreground/20" 
+src/components/Footer.tsx:                  isAr ? "text-[12px]" : "text-[10px]"
+src/components/Footer.tsx:            <a href="#" className="text-[10px] text-muted-foreground hover:text-primary transition-colors font-bold tracking-[0.1em]">{t('footer.privacy')}</a>
+src/components/Footer.tsx:            <a href="#" className="text-[10px] text-muted-foreground hover:text-primary transition-colors font-bold tracking-[0.1em]">{t('footer.terms')}</a>
+src/services/pexelsService.ts:      height: 1080,
+src/services/pexelsService.ts:        original: `https://picsum.photos/seed/${fallbackSeed}-${i}/1920/1080`,
+src/services/pexelsService.ts:        large2x: `https://picsum.photos/seed/${fallbackSeed}-${i}/1920/1080`,
+src/services/aiService.ts:      ? `\n\nUSER CREATIONS CONTEXT:\n${creations.map(c => `- Type: ${c.type}, Prompt: ${c.prompt || "N/A"}, Status: ${c.status}, Created: ${new Date(c.createdAt?.seconds * 1000).toLocaleDateString()}`).join("\n")}`
+src/i18n.ts:            "virality": "82/100"
+src/i18n.ts:          "evaluated_tokens": "EVALUATED AT 1024K TOKENS",
+src/i18n.ts:            "virality": "82/100"
+src/i18n.ts:          "evaluated_tokens": "تم التقييم عند 1024 ألف توكن",
+src/lib/utils.ts:export async function compressImageBase64(base64: string, maxWidth = 1024, maxHeight = 1024, quality = 0.8): Promise<string> {
+src/lib/pricing-data.ts:    priceYearly: 10,
+src/index.css:  --color-neutral-100: #F4F4F5;
+src/index.css:  --radius-lg: 10px;
+src/index.css:  --shadow-soft-lg: 0 10px 28px rgba(15, 23, 42, 0.12);
+src/index.css:  --secondary: #103C3A;
+src/index.css:  @apply text-[40px] font-black leading-[1.10] tracking-[var(--tracking-display)] font-display;
+src/index.css:    width: 10px;
+src/index.css:    height: 10px;
+src/index.css:    box-shadow: 0 10px 30px -5px color-mix(in srgb, var(--primary) 15%, transparent);
+src/index.css:    @apply inline-flex items-center justify-center rounded-md bg-primary/10 text-primary transition-transform hover:scale-110;
+src/index.css:    @apply inline-flex items-center justify-center rounded-md bg-secondary text-secondary-foreground transition-transform hover:scale-110;
+src/index.css:    @apply px-6 py-3 text-[10px] font-bold text-muted-foreground align-middle;
+src/index.css:    @apply flex items-center gap-1 p-1 bg-muted border border-border rounded-lg h-10 no-scrollbar overflow-x-auto overflow-y-hidden mb-6;
+src/index.css:    @apply h-8 px-4 py-1.5 text-[10px] uppercase font-bold tracking-wider text-muted-foreground rounded-md transition-all whitespace-nowrap;
+src/index.css:    @apply p-4 rounded-lg bg-primary/5 border border-primary/10 space-y-3;
+src/index.css:    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-105;
+src/index.css:    @apply rounded-lg border border-border bg-card p-4 transition-all hover:bg-muted/10;
+src/index.css:    @apply rounded-lg border border-amber-500/20 bg-amber-500/5 p-4 transition-all hover:bg-amber-500/10;
+src/index.css:        1000px circle at 50% 100%,
+src/index.css:    radial-gradient(1000px circle at 20% 21%, color-mix(in srgb, var(--color-brand-primary) 18%, transparent) 0%, transparent 48%), 
+src/index.css:    radial-gradient(800px circle at 100% 100%, color-mix(in srgb, var(--foreground) 13%, transparent) 0%, transparent 55%);
+src/index.css:    @apply ui-text-display-hero mb-10 text-foreground transition-all duration-700 ease-out font-black;
+src/index.css:    @apply inline-flex items-center rounded-full border border-border px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] bg-muted/40 text-primary border-primary/20 mb-8;
+src/index.css:    @apply aspect-[16/10] -mx-6 -mt-6 mb-6 overflow-hidden relative;
+src/index.css:    @apply inline-flex items-center rounded-full border border-border px-4 py-1.5 text-[10px] font-bold bg-muted/40 text-primary border-primary/20 backdrop-blur-md mb-8;
+src/index.css:    @apply inline-flex items-center rounded-full border border-border px-4 py-1.5 text-[10px] font-bold bg-muted/40 text-primary border-primary/20 mb-8;
+src/index.css:    @apply inline-flex items-center rounded-full border border-border px-4 py-1.5 text-[10px] font-bold bg-muted/40 text-primary border-primary/20 backdrop-blur-md mb-8;
+src/index.css:    @apply absolute -top-5 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-primary text-primary-foreground text-[10px] font-bold rounded-full shadow-2xl z-20 whitespace-nowrap;
+src/index.css:    @apply inline-flex items-center rounded-full border border-primary/20 px-4 py-1.5 text-[10px] font-bold bg-primary/5 text-primary mb-8;
+src/index.css:    @apply max-w-2xl ui-text-body-lg text-muted-foreground mb-10;
+src/index.css:  background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 55%, var(--color-brand-tertiary) 100%);
+src/index.css:  background: linear-gradient(135deg, var(--color-brand-primary-soft) 0%, var(--color-brand-primary) 55%, var(--color-brand-tertiary) 100%);
+src/index.css:    @apply relative flex flex-col items-center justify-center p-10 rounded-xl transition-all duration-500 cursor-pointer;
+src/index.css:        inset 0 0 25px rgba(182, 103, 255, 0.05);
+src/index.css:    100% {
+src/index.css:        inset 0 0 45px rgba(182, 103, 255, 0.1);
+src/index.css:      inset 0 0 60px rgba(182, 103, 255, 0.15); /* Reduced Intensity Inner */
+src/index.css:    @apply opacity-100;
+src/index.css:    @apply absolute -z-10 pointer-events-none;
+src/index.css:    background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 70%);
+src/index.css:    @apply absolute -z-10 pointer-events-none;
+src/index.css:    @apply ui-pricing-card border-primary/60 bg-card/60 relative overflow-visible scale-105 z-10;
+src/index.css:    box-shadow: 0 0 40px -10px color-mix(in srgb, var(--primary) 20%, transparent);
+src/index.css:    @apply dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-400;
+src/index.css:    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+src/index.css:      radial-gradient(at 100% 0%, color-mix(in srgb, var(--secondary-foreground) 6%, transparent) 0px, transparent 50%),
+src/index.css:      radial-gradient(at 100% 100%, color-mix(in srgb, var(--tertiary) 6%, transparent) 0px, transparent 50%),
+src/index.css:      radial-gradient(at 0% 100%, color-mix(in srgb, var(--primary) 6%, transparent) 0px, transparent 50%);
+src/index.css:    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");

@@ -1,0 +1,56 @@
+{
+  "short_name": "nxclip.ai",
+  "name": "nxclip.ai | AI Creator Intelligence Platform",
+  "description": "Premium AI Operating System for Gaming Creators. Generate professional gaming images, edit viral clips, and scale your audience with creator intelligence.",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "orientation": "portrait-primary",
+  "categories": ["utilities", "productivity", "entertainment"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Creator Coach",
+      "short_name": "Coach",
+      "description": "Chat with your AI Creator Coach",
+      "url": "/coach",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Image Studio",
+      "short_name": "Studio",
+      "description": "Generate viral gaming images",
+      "url": "/studio",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Creator Dashboard",
+      "short_name": "Dashboard",
+      "description": "Analyze your audience engagement",
+      "url": "/dashboard",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}
