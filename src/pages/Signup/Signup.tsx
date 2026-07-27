@@ -48,18 +48,6 @@ export default function Signup() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
-  // Redirect if already logged in - Handled by PublicGuard in App.tsx
-  /*
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user && !loading && !success) {
-        navigate("/feed");
-      }
-    });
-    return () => unsubscribe();
-  }, [navigate]);
-  */
-
   // Real-time Email Check
   useEffect(() => {
     if (!email || !email.includes("@") || !email.includes(".")) {
@@ -215,7 +203,6 @@ export default function Signup() {
     setError("");
 
     try {
-      // API Gateway Register exclusively
       const res = await identityApi.register({
         email,
         username,
@@ -243,14 +230,14 @@ export default function Signup() {
         displayName: res.user.displayName,
         email: res.user.email,
         photoURL: null,
-        plan: res.user.plan.toLowerCase() as any,
-        role: res.user.roles[0] as any,
+        plan: (res.user.plan || "free").toLowerCase() as any,
+        role: (res.user.roles?.[0] || "creator") as any,
         onboardingCompleted: false,
         createdAt: res.user.createdAt,
       }));
 
       setSuccess(true);
-      toast.success("Account Created via API Gateway!", {
+      toast.success("Account created!", {
         description: "Checking system requirements and preparing dashboard."
       });
       setTimeout(() => {
@@ -259,8 +246,8 @@ export default function Signup() {
         navigate(returnTo, { replace: true });
       }, 1000);
     } catch (err: any) {
-      console.error("API Gateway signup error:", err);
-      let errMsg = "Failed to create account via API Gateway. Please try again.";
+      console.error("Signup error:", err);
+      let errMsg = "Failed to create account. Please try again.";
       if (err) {
         if (err.message) {
           errMsg = Array.isArray(err.message) ? err.message.join(", ") : err.message;
@@ -587,7 +574,7 @@ export default function Signup() {
                 <div className="flex flex-col items-center justify-center py-0.5">
                   <div className="flex items-center gap-2">
                     <Loader2 className="w-4 h-4 animate-spin text-white" />
-                    <span className="font-semibold text-xs tracking-wider uppercase">Registering via API Gateway...</span>
+                    <span className="font-semibold text-xs tracking-wider uppercase">Creating account...</span>
                   </div>
                   <span className="text-[9px] text-white/70 font-normal tracking-wide mt-0.5 lowercase animate-pulse">Initializing user registry handshake</span>
                 </div>
@@ -601,8 +588,6 @@ export default function Signup() {
               )}
             </Button>
           </form>
-
-
 
           <p className="mt-8 text-center text-xs text-muted-foreground font-medium">
             Already have an account? <Link to="/login" className="text-primary font-bold hover:underline underline-offset-4">Sign in →</Link>
