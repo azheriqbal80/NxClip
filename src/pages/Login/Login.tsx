@@ -11,7 +11,7 @@ import { Input } from "../../components/ui/input";
 import { FormField } from "../../components/ui/form-field";
 import { useAppDispatch } from "../../store/hooks";
 import { setGlobalError } from "../../store/slices/uiSlice";
-import { setAuthUser, setAuthProfile } from "../../store/slices/authSlice";
+import { setAuthUser } from "../../store/slices/authSlice";
 import { identityApi } from "../../services/apiClient";
 import { safeLocalStorage } from "../../lib/safeStorage";
 import { setPersistedUser } from "../../services/auth/authService";
@@ -25,12 +25,25 @@ const loginSchema = z.object({
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
+const LOCKOUT_DURATION = 900; // 15 minutes in seconds
+const LOCKOUT_KEY = "nx_lockout_expiry";
+
 export default function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [attempts, setAttempts] = useState(0);
-  const [lockoutTime, setLockoutTime] = useState(0);
+
+  // Initialise from sessionStorage so lockout survives page refresh
+  const [lockoutTime, setLockoutTime] = useState(() => {
+    try {
+      const expiry = Number(sessionStorage.getItem(LOCKOUT_KEY) || 0);
+      return Math.max(0, Math.floor((expiry - Date.now()) / 1000));
+    } catch {
+      return 0;
+    }
+  });
+
   const [rememberMe, setRememberMe] = useState(() => {
     return safeLocalStorage.getItem("nx_remember_me") !== "false";
   });
@@ -56,11 +69,17 @@ export default function Login() {
     },
   });
 
-  // Lockout Timer
+  // Lockout Timer — counts down and clears sessionStorage when it hits zero
   useEffect(() => {
     if (lockoutTime > 0) {
       const timer = setInterval(() => {
-        setLockoutTime((prev) => Math.max(0, prev - 1));
+        setLockoutTime((prev) => {
+          const next = Math.max(0, prev - 1);
+          if (next === 0) {
+            try { sessionStorage.removeItem(LOCKOUT_KEY); } catch {}
+          }
+          return next;
+        });
       }, 1000);
       return () => clearInterval(timer);
     }
@@ -89,17 +108,9 @@ export default function Login() {
         refreshToken: res.refreshToken,
       }, rememberMe);
 
+      // Only set the user identity here. The profile (including onboardingCompleted)
+      // is fetched from GET /auth/me by App.tsx's fetchGatewayProfile() once user is set.
       dispatch(setAuthUser(serializedUser));
-      dispatch(setAuthProfile({
-        uid: res.user.id,
-        displayName: res.user.displayName,
-        email: res.user.email,
-        photoURL: null,
-        plan: res.user.plan.toLowerCase() as any,
-        role: res.user.roles[0] as any,
-        onboardingCompleted: res.user.onboardingCompleted ?? false,
-        createdAt: res.user.createdAt,
-      }));
 
       const returnTo = safeLocalStorage.getItem("nx_return_to") || "/feed";
       safeLocalStorage.removeItem("nx_return_to");
@@ -121,7 +132,10 @@ export default function Login() {
         }
       }
       if (newAttempts >= 5) {
-        setLockoutTime(900);
+        try {
+          sessionStorage.setItem(LOCKOUT_KEY, String(Date.now() + LOCKOUT_DURATION * 1000));
+        } catch {}
+        setLockoutTime(LOCKOUT_DURATION);
         errMsg = "Too many attempts. Your account is temporarily locked. Try again in 15 minutes.";
       }
       
