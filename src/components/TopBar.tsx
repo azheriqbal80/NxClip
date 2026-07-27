@@ -33,7 +33,6 @@ import { useAppSelector, useAppDispatch } from "../store/hooks";
 import { selectAuthProfile, selectAuthUser, logoutUser } from "../store/slices/authSlice";
 import { selectAuthProvider } from "../store/slices/uiSlice";
 import { identityApi } from "../services/apiClient";
-import { clearPersistedUser } from "../services/auth/authService";
 import { socketService } from "../services/socketService";
 import {
   CommandDialog,
@@ -104,12 +103,12 @@ export default function TopBar({ title }: { title?: string }) {
   const handleLogout = async () => {
     setShowUserMenu(false);
     try {
+      // identityApi.logout() always calls clearPersistedUser() in its own finally block
       await identityApi.logout();
     } catch (err) {
       console.warn("Logout request did not complete on server, clearing session locally:", err);
     } finally {
       socketService.disconnect();
-      clearPersistedUser();
       dispatch(logoutUser());
       navigate("/login");
     }
