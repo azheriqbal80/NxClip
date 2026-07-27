@@ -356,7 +356,9 @@ export default function App() {
         emailVerified: parsed.emailVerified ?? true,
       }));
 
-      // Attempt silent token refresh on boot if using gateway auth
+      // Attempt silent token refresh on boot if using gateway auth.
+      // Do NOT set loading=false here — fetchGatewayProfile() (triggered by the
+      // profile useEffect below) owns that responsibility once getMe() resolves.
       const refreshToken = parsed.refreshToken;
       if (refreshToken && authProvider === "gateway") {
         identityApi.refresh(refreshToken)
@@ -369,12 +371,14 @@ export default function App() {
             // Refresh failed — session is truly expired, force logout
             clearPersistedUser();
             dispatch(logoutUser());
+            dispatch(setAuthLoading(false));
           });
       }
     } else {
+      // No persisted user — nothing async to wait for
       dispatch(setAuthUser(null));
+      dispatch(setAuthLoading(false));
     }
-    dispatch(setAuthLoading(false));
   }, [dispatch]);
 
   useEffect(() => {
