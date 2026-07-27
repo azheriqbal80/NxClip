@@ -472,6 +472,7 @@ export interface AuthResponseDto {
     emailVerified: boolean;
     roles: string[];
     createdAt: string;
+    onboardingCompleted?: boolean;
   };
   accessToken: string;
   refreshToken: string;
@@ -516,6 +517,8 @@ export const identityApi = {
     );
   },
 
+  // Canonical place to clear tokens — callers must NOT call clearPersistedUser()
+  // again after this; doing so is redundant since this always clears in its finally.
   logout: async (): Promise<void> => {
     try {
       const refreshToken = getRefreshToken();
@@ -712,9 +715,6 @@ export const contentApi = {
   },
 
   generateImage: async (prompt: string, style = "cinematic", aspectRatio = "16:9", model?: string): Promise<GenerateContentResponse> => {
-    // LIVE-ONLY: the gateway Content Service runs generation inline and returns
-    // { contentId, cdnUrl, thumbnailUrl, captions[3], hashtagSets[3], watermarked }.
-    // No local Gemini proxy, no mock DB writes — failures throw a structured ApiError.
     const body: { prompt: string; style: string; aspectRatio: string; model?: string } = { prompt, style, aspectRatio };
     if (model?.trim()) {
       body.model = model.trim();
@@ -778,8 +778,6 @@ export const contentApi = {
     return allItems;
   },
 
-  // Owned content in any non-deleted status (draft / processing / publishing / ...).
-  // Used to poll real moderation/publish outcome after POST /content/{id}/publish.
   getMyContentById: async (id: string, options?: { suppressErrorLog?: boolean }): Promise<ContentDto> => {
     return performApiRequest<ContentDto>(
       `/content/mine/${id}`,
@@ -813,9 +811,6 @@ export const contentApi = {
   },
 
   publish: async (id: string, data?: { title?: string; caption?: string; hashtags?: string[]; description?: string }): Promise<PublishContentResponse> => {
-    // Backend publish DTO is strict (whitelist / forbidNonWhitelisted): only
-    // title/caption/hashtags/description are accepted — any other field 400s.
-    // Build the payload explicitly so no stray field (even via `as any`) can regress it.
     const payload: { title?: string; caption?: string; hashtags?: string[]; description?: string } = {};
     if (data?.title !== undefined) payload.title = data.title;
     if (data?.caption !== undefined) payload.caption = data.caption;
@@ -839,7 +834,6 @@ export const contentApi = {
     );
   },
 
-  // Internal callbacks testing API pipeline
   moderationCallback: async (id: string, jobId: string, approved: boolean, flags?: string[]): Promise<void> => {
     return performApiRequest<void>(
       `/internal/content/${id}/callbacks/moderation`,
