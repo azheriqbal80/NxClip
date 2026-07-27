@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/gateway-proxy/:path*",
+      "destination": "https://api-gateway-216098834386.us-central1.run.app/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
