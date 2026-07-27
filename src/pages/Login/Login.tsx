@@ -73,9 +73,7 @@ export default function Login() {
     setError("");
 
     try {
-      // Live-only: authenticate through the API Gateway.
       const res = await identityApi.login(data.email, data.password);
-
 
       const serializedUser = {
         uid: res.user.id,
@@ -99,13 +97,13 @@ export default function Login() {
         photoURL: null,
         plan: res.user.plan.toLowerCase() as any,
         role: res.user.roles[0] as any,
-        onboardingCompleted: true,
+        onboardingCompleted: res.user.onboardingCompleted ?? false,
         createdAt: res.user.createdAt,
       }));
 
       const returnTo = safeLocalStorage.getItem("nx_return_to") || "/feed";
       safeLocalStorage.removeItem("nx_return_to");
-      toast.success("Successfully logged in via API Gateway");
+      toast.success("Successfully logged in");
       dispatch(setGlobalError(null));
       navigate(returnTo);
     } catch (err: any) {
@@ -123,7 +121,7 @@ export default function Login() {
         }
       }
       if (newAttempts >= 5) {
-        setLockoutTime(900); // 15 minutes
+        setLockoutTime(900);
         errMsg = "Too many attempts. Your account is temporarily locked. Try again in 15 minutes.";
       }
       
@@ -131,12 +129,11 @@ export default function Login() {
       toast.error("Login Failed", { description: errMsg });
       dispatch(setGlobalError({ message: errMsg, code: err?.code || "auth/invalid-credentials", context: "Email Login" }));
       
-      // Shake animation
       controls.start({
         x: [-10, 10, -10, 10, 0],
         transition: { duration: 0.2 }
       });
-      resetField("password"); // Clear password field using RHF
+      resetField("password");
     } finally {
       setLoading(false);
     }
