@@ -4,6 +4,7 @@ import { retryWithBackoff, dispatchErrorToast } from "../../lib/errorNotify";
 import { setGlobalError } from "./uiSlice";
 import { safeLocalStorage, safeSessionStorage } from "../../lib/safeStorage";
 import { STORAGE_KEYS } from "../../constants";
+import { getAccessToken } from "../../services/auth/authService";
 
 export interface SerializedUser {
   uid: string;
@@ -37,7 +38,7 @@ const initialState: AuthState = {
   user: persistedUser,
   profile: null,
   isAuthenticated: !!persistedUser,
-  loading: !persistedUser, // immediately load if we don't have a cached session, otherwise wait for auth listener confirm
+  loading: !persistedUser,
   error: null,
 };
 
@@ -76,16 +77,18 @@ export const {
   logoutUser,
 } = authSlice.actions;
 
-// Async Thunks for authentication with retries and error notifications
 export const fetchUserProfileAsync = createAsyncThunk(
   "auth/fetchUserProfile",
   async (uid: string, { dispatch, rejectWithValue }) => {
     dispatch(setAuthLoading(true));
     try {
       const apiCall = async () => {
-        const response = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:3000"}/api/users/profile/${uid}`, {
+        const baseUrl = import.meta.env.VITE_API_URL ?? "http://localhost:5000";
+        const token = getAccessToken();
+        const response = await fetch(`${baseUrl}/users/${uid}`, {
           headers: {
             "Content-Type": "application/json",
+            ...(token ? { Authorization: `Bearer ${token}` } : {}),
           },
         });
         if (!response.ok) {
@@ -94,7 +97,6 @@ export const fetchUserProfileAsync = createAsyncThunk(
         return await response.json();
       };
 
-      // Wrap the api call with our backoff retry helper (3 retries)
       const data = await retryWithBackoff(apiCall, 3, 1000, 2, (err, attempt) => {
         console.warn(`Fetch user profile failed, retrying... Attempts remaining: ${attempt}. Error: ${err.message}`);
       });
@@ -103,7 +105,6 @@ export const fetchUserProfileAsync = createAsyncThunk(
       dispatch(setAuthLoading(false));
       return data;
     } catch (error: any) {
-      // Dispatch error notification using the sonner library
       const errPayload = dispatchErrorToast(error, "Authentication", "Fetch User Profile");
       dispatch(setAuthError(errPayload.message));
       dispatch(setAuthLoading(false));
@@ -146,4 +147,3 @@ export const selectAuthError = createSelector(
 );
 
 export default authSlice.reducer;
-
