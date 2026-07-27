@@ -19,24 +19,20 @@ function sanitizeConsoleArg(arg: any, seen = new WeakSet()): any {
     return arg;
   }
 
-  // Avoid circular reference crashes
   if (seen.has(arg)) {
     return "[Circular]";
   }
 
-  // Safely skip massive standard elements or react internal fibers
   if (arg instanceof HTMLElement || (arg.constructor && arg.constructor.name && arg.constructor.name.includes("HTML"))) {
     return `[HTMLElement: ${arg.tagName || arg.constructor.name}]`;
   }
 
-  // Avoid global browser context objects
   if (arg === window || arg === document) {
     return "[Global Browser Object]";
   }
 
   seen.add(arg);
 
-  // Handle standard Error objects cleanly
   if (arg instanceof Error) {
     const errorDetails: Record<string, any> = {
       name: arg.name,
@@ -49,17 +45,15 @@ function sanitizeConsoleArg(arg: any, seen = new WeakSet()): any {
     return errorDetails;
   }
 
-  // Handle Arrays safely
   if (Array.isArray(arg)) {
     return arg.map((item) => sanitizeConsoleArg(item, seen));
   }
 
-  // Handle standard objects
   const sanitized: Record<string, any> = {};
   const keys = Object.keys(arg);
   for (const key of keys) {
     try {
-      if (key.startsWith("_") || key === "firestore" || key === "auth" || key === "app") {
+      if (key.startsWith("_")) {
         sanitized[key] = `[Internal ${key}]`;
       } else {
         sanitized[key] = sanitizeConsoleArg(arg[key], seen);
@@ -81,23 +75,6 @@ console.log = (...args: any[]) => {
 
 console.error = (...args: any[]) => {
   try {
-    const stringifiedArgs = args.map(arg => {
-      if (arg && typeof arg === 'object') {
-        return arg.message || JSON.stringify(arg);
-      }
-      return String(arg);
-    }).join(' ');
-
-    if (
-      stringifiedArgs.includes("Could not reach Cloud Firestore backend") || 
-      stringifiedArgs.includes("@firebase/firestore") ||
-      stringifiedArgs.includes("Firestore (10.8.0)")
-    ) {
-      // Demote to print as normal warning to avoid blocking the environment's error detection
-      originalConsoleWarn(...args.map((arg) => sanitizeConsoleArg(arg)));
-      return;
-    }
-
     originalConsoleError(...args.map((arg) => sanitizeConsoleArg(arg)));
   } catch {
     originalConsoleError("[Circular Console Error Bypassed]");
@@ -120,7 +97,7 @@ console.info = (...args: any[]) => {
   }
 };
 
-// Global window.fetch adapter to mock API responses when nxclip_mock_api is true
+// Global window.fetch adapter to redirect direct external gateway fetches through the proxy
 const originalFetch = (window.fetch || (globalThis && globalThis.fetch)).bind(window);
 
 async function mockedFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response> {
@@ -178,7 +155,6 @@ async function mockedFetch(input: RequestInfo | URL, init?: RequestInit): Promis
 
   const url = rewrittenUrl;
 
-  // Redirect direct external gateway fetches through our local Express gateway proxy to avoid DNS resolution/CORS issues
   if (url.includes("staging-api.nxclip.ai") || url.includes("api.nxclip.ai")) {
     const isStaging = url.includes("staging-api.nxclip.ai");
     const targetBase = isStaging ? "https://staging-api.nxclip.ai" : "https://api.nxclip.ai";
@@ -196,7 +172,6 @@ async function mockedFetch(input: RequestInfo | URL, init?: RequestInit): Promis
   return originalFetch(finalInput, init);
 }
 
-// Safely define property on window and globalThis
 try {
   Object.defineProperty(window, "fetch", {
     value: mockedFetch,
