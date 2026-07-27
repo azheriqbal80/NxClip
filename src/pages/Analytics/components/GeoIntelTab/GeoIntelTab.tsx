@@ -4,11 +4,8 @@ import { motion } from "motion/react";
 import { 
   Users, Target, Clock, TrendingUp, Globe, Zap, 
   Activity, Gamepad2, BarChart3, ChevronRight, Flame, BrainCircuit,
-  ZoomIn, ZoomOut, RotateCcw
 } from "lucide-react";
-import { ComposableMap, Geographies, Geography, ZoomableGroup } from "react-simple-maps";
-import { scaleLinear } from "d3-scale";
-import { interpolateRgb } from "d3-interpolate";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../../components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../../../components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../../../components/ui/table";
@@ -16,14 +13,18 @@ import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
 import { cn } from "../../../../lib/utils";
 import { MetricCard } from "../shared-components";
-import { GEO_INTEL_DATA, GEO_INTEL_STRATEGY, REGION_TOTALS, geoUrl } from "../constants";
+import { GEO_INTEL_DATA, GEO_INTEL_STRATEGY, REGION_TOTALS } from "../constants";
 import { AnalyticsGeoIntelSkeleton } from "../../skeletons/AnalyticsSkeleton";
-
-const MotionZoomableGroup = motion(ZoomableGroup);
 
 interface GeoIntelTabProps {
   isLoading: boolean;
 }
+
+const LAYER_COLORS: Record<string, string> = {
+  views: "#7c3aed",
+  avgPercent: "#10b981",
+  watchTime: "#ec4899",
+};
 
 export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
   const { t, i18n } = useTranslation();
@@ -31,33 +32,11 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
 
   const [mapLayer, setMapLayer] = useState<"views" | "avgPercent" | "watchTime">("views");
   const [geoRegionFilter, setGeoRegionFilter] = useState("all");
-  const [zoom, setZoom] = useState(1);
-  const [center, setCenter] = useState<[number, number]>([10, 20]);
-
-  const safeZoom = isNaN(zoom) ? 1 : zoom;
 
   const layers = useMemo(() => ({
-    views: {
-      scale: scaleLinear<string>().domain([0, 4000]).range(["#1a1a1a", "#7c3aed"]).interpolate(interpolateRgb),
-      label: t('geo.layer_names.views'),
-      unit: "views",
-      min: "0",
-      max: "4k"
-    },
-    avgPercent: {
-      scale: scaleLinear<string>().domain([0, 100]).range(["#1a1a1a", "#10b981"]).interpolate(interpolateRgb),
-      label: t('geo.layer_names.avgPercent'),
-      unit: "%",
-      min: "0%",
-      max: "100%"
-    },
-    watchTime: {
-      scale: scaleLinear<string>().domain([0, 20000]).range(["#1a1a1a", "#ec4899"]).interpolate(interpolateRgb),
-      label: t('geo.layer_names.watchTime'),
-      unit: "min",
-      min: "0",
-      max: "20k"
-    }
+    views: { label: t('geo.layer_names.views'), unit: "views" },
+    avgPercent: { label: t('geo.layer_names.avgPercent'), unit: "%" },
+    watchTime: { label: t('geo.layer_names.watchTime'), unit: "min" },
   }), [t]);
 
   const filteredGeoData = useMemo(() => {
@@ -65,11 +44,18 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
     return GEO_INTEL_DATA.filter((item) => item.id === geoRegionFilter);
   }, [geoRegionFilter]);
 
+  const chartData = useMemo(() =>
+    filteredGeoData.map((r) => ({
+      name: r.country.length > 8 ? r.country.slice(0, 8) + "…" : r.country,
+      value: r[mapLayer],
+      id: r.id,
+    })),
+  [filteredGeoData, mapLayer]);
+
   const geoTotals = useMemo(() => {
     if (geoRegionFilter === "all") return REGION_TOTALS;
     const region = GEO_INTEL_DATA.find((r) => r.id === geoRegionFilter);
     if (!region) return REGION_TOTALS;
-
     return {
       ...REGION_TOTALS,
       views: region.views,
@@ -97,7 +83,7 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
         <MetricCard title={t('geo.metric_viral')} value={geoRegionFilter === "all" ? "88/100" : `${GEO_INTEL_DATA.find((r) => r.id === geoRegionFilter)?.viralityScore || 0}/100`} trend={6.2} icon={Zap} />
       </div>
 
-      {/* Hero Map Section */}
+      {/* Hero Chart Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <Card className="lg:col-span-8 overflow-hidden bg-card border-border shadow-soft group hover:border-primary/20 transition-all">
           <CardHeader className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -119,15 +105,15 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
               </Select>
             </div>
           </CardHeader>
-          <CardContent className="relative p-0 h-[380px] bg-[#0c0c0c] flex items-center justify-center">
-            {/* Layers Filter Toggle Buttons */}
-            <div className="absolute top-4 left-4 z-10 flex flex-col gap-1.5 p-1 bg-card/60 backdrop-blur-md rounded-lg border border-border">
+          <CardContent className="p-4">
+            {/* Layer Toggle */}
+            <div className="flex gap-2 mb-4">
               {(Object.keys(layers) as Array<"views" | "avgPercent" | "watchTime">).map((key) => (
-                <Button 
-                  key={key} 
+                <Button
+                  key={key}
                   variant={mapLayer === key ? "default" : "ghost"}
-                  size="sm" 
-                  className={cn("h-7 text-[8px] font-black tracking-wider justify-start px-2.5", mapLayer !== key && "text-muted-foreground")}
+                  size="sm"
+                  className={cn("h-7 text-[8px] font-black tracking-wider px-2.5", mapLayer !== key && "text-muted-foreground")}
                   onClick={() => setMapLayer(key)}
                 >
                   {layers[key].label}
@@ -135,80 +121,38 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
               ))}
             </div>
 
-            {/* Scale Indicator */}
-            <div className="absolute bottom-4 left-4 z-10 p-3 bg-card/60 backdrop-blur-md rounded-lg border border-border space-y-1.5">
-              <span className="text-[8px] font-black text-muted-foreground uppercase block tracking-wider">{t('geo.layer_intensity')}</span>
-              <div className="flex items-center gap-2">
-                <span className="text-[9px] font-mono font-bold text-muted-foreground">{layers[mapLayer].min}</span>
-                <div 
-                  className="w-24 h-2 rounded-full border border-white/5" 
-                  style={{ 
-                    background: `linear-gradient(to right, #1a1a1a, ${
-                      mapLayer === "views" ? "#7c3aed" : mapLayer === "avgPercent" ? "#10b981" : "#ec4899"
-                    })` 
-                  }} 
-                />
-                <span className="text-[9px] font-mono font-bold text-muted-foreground">{layers[mapLayer].max}</span>
-              </div>
+            {/* Bar Chart */}
+            <div className="h-[300px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData} margin={{ top: 8, right: 8, left: -20, bottom: 40 }}>
+                  <XAxis
+                    dataKey="name"
+                    tick={{ fill: "var(--muted-foreground)", fontSize: 9, fontWeight: 700 }}
+                    angle={-35}
+                    textAnchor="end"
+                    interval={0}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    tick={{ fill: "var(--muted-foreground)", fontSize: 9 }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <Tooltip
+                    contentStyle={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, fontSize: 11 }}
+                    labelStyle={{ color: "var(--foreground)", fontWeight: 700 }}
+                    itemStyle={{ color: LAYER_COLORS[mapLayer] }}
+                    formatter={(val: number) => [`${val.toLocaleString()} ${layers[mapLayer].unit}`, layers[mapLayer].label]}
+                  />
+                  <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+                    {chartData.map((entry) => (
+                      <Cell key={entry.id} fill={LAYER_COLORS[mapLayer]} opacity={geoRegionFilter === "all" || geoRegionFilter === entry.id ? 1 : 0.3} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
             </div>
-
-            {/* Map Interaction Zoom Controls */}
-            <div className="absolute bottom-4 right-4 z-10 flex flex-col gap-1 p-1 bg-card/60 backdrop-blur-md rounded-lg border border-border">
-              <Button size="icon" variant="ghost" className="h-7 w-7 text-muted-foreground hover:text-foreground" onClick={() => setZoom((z) => Math.min(z * 1.5, 8))}><ZoomIn size={14} /></Button>
-              <Button size="icon" variant="ghost" className="h-7 w-7 text-muted-foreground hover:text-foreground" onClick={() => setZoom((z) => Math.max(z / 1.5, 1))}><ZoomOut size={14} /></Button>
-              <Button size="icon" variant="ghost" className="h-7 w-7 text-muted-foreground hover:text-foreground" onClick={() => { setZoom(1); setCenter([10, 20]); }}><RotateCcw size={14} /></Button>
-            </div>
-
-            {/* SVG Map Canvas */}
-            <ComposableMap 
-              projectionConfig={{ rotate: [-10, 0, 0], scale: 140 }} 
-              width={800} 
-              height={400} 
-              style={{ width: "100%", height: "100%" }}
-            >
-              <MotionZoomableGroup 
-                zoom={safeZoom} 
-                center={center} 
-                onMoveEnd={({ coordinates, zoom: moveZoom }) => {
-                  if (coordinates && !isNaN(coordinates[0]) && !isNaN(coordinates[1])) {
-                    setCenter(coordinates as [number, number]);
-                  }
-                  if (moveZoom && !isNaN(moveZoom)) {
-                    setZoom(moveZoom);
-                  }
-                }}
-              >
-                <Geographies geography={geoUrl}>
-                  {({ geographies }) =>
-                    geographies.map((geo, index) => {
-                      const regionData = GEO_INTEL_DATA.find((r) => r.id === geo.id || r.id === geo.properties.ISO_A3);
-                      const isHighlighted = geoRegionFilter !== "all" && geoRegionFilter === geo.id;
-                      
-                      let fillColor = "#141414";
-                      if (regionData) {
-                        const val = regionData[mapLayer];
-                        fillColor = layers[mapLayer].scale(val);
-                      }
-
-                      return (
-                        <Geography 
-                          key={geo.rkey || geo.id || geo.properties?.ISO_A3 || geo.properties?.NAME || `geo-${index}`} 
-                          geography={geo} 
-                          fill={fillColor}
-                          stroke={isHighlighted ? "var(--primary)" : "#222"}
-                          strokeWidth={isHighlighted ? 1.5 : 0.5}
-                          style={{
-                            default: { outline: "none", transition: "all 250ms" },
-                            hover: { fill: regionData ? "var(--primary)" : "#2a2a2a", outline: "none", cursor: "pointer" },
-                            pressed: { outline: "none" }
-                          }}
-                        />
-                      );
-                    })
-                  }
-                </Geographies>
-              </MotionZoomableGroup>
-            </ComposableMap>
           </CardContent>
         </Card>
 
@@ -224,8 +168,8 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
             </CardHeader>
             <CardContent className="flex-1 space-y-4">
               {GEO_INTEL_STRATEGY.map((strat, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   initial={{ opacity: 0, x: i18n.language === 'ar' ? -20 : 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
@@ -299,7 +243,7 @@ export const GeoIntelTab = memo(({ isLoading }: GeoIntelTabProps) => {
                   <span className="text-muted-foreground font-mono">{format.engagement}{i18n.language === 'ar' ? '٪' : '%'} ENG</span>
                 </div>
                 <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
-                  <motion.div 
+                  <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${format.engagement}%` }}
                     className="h-full rounded-full"
