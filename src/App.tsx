@@ -21,7 +21,8 @@ import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { setAuthUser, setAuthProfile, setAuthLoading, SerializedUser, selectAuthUser, selectAuthProfile, selectAuthLoading, logoutUser } from "./store/slices/authSlice";
 import { selectAuthProvider } from "./store/slices/uiSlice";
 import { identityApi } from "./services/apiClient";
-import { getPersistedUser, setPersistedUser, useAuthToken, isLoggedInPersisted } from "./services/auth/authService";
+import { getPersistedUser, setPersistedUser, useAuthToken, isLoggedInPersisted, clearPersistedUser, updateAccessToken } from "./services/auth/authService";
+import { socketService } from "./services/socketService";
 import { STORAGE_KEYS } from "./constants";
 
 // --- Loading Component ---
@@ -92,14 +93,10 @@ const PageLoader = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-950 text-white relative overflow-hidden select-none">
-      {/* Background radial gradient representing premium energy */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.06)_0%,transparent_65%)] pointer-events-none" />
       
-      {/* Container area */}
       <div className="flex flex-col items-center z-10 max-w-xs text-center px-6">
-        {/* Glowing Logo Frame */}
         <div className="relative mb-6">
-          {/* Pulsating back aura */}
           <motion.div 
             animate={{ 
               scale: [1, 1.12, 1],
@@ -113,7 +110,6 @@ const PageLoader = () => {
             className="absolute -inset-4 bg-gradient-to-r from-primary to-brand-secondary rounded-2xl blur-xl opacity-50"
           />
           
-          {/* Logo container matching PwaManager badge */}
           <motion.div 
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -128,7 +124,6 @@ const PageLoader = () => {
             />
           </motion.div>
           
-          {/* Gold Sparkle accent */}
           <motion.div
             animate={{ 
               scale: [0.8, 1.2, 0.8],
@@ -145,7 +140,6 @@ const PageLoader = () => {
           </motion.div>
         </div>
 
-        {/* Branding Title */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -160,14 +154,11 @@ const PageLoader = () => {
             </div>
           </div>
           
-          {/* Cycling Technical Logs */}
           <p className="text-[10px] font-mono tracking-wider text-zinc-400 h-4 mt-2 lowercase">
             {subsystemLog}
           </p>
 
-          {/* Diagnostic Log Info Badges */}
           <div className="mt-3.5 flex flex-wrap items-center justify-center gap-2 font-mono text-[9px] uppercase tracking-wider select-none">
-            {/* Diagnostic Log Source Badge */}
             <div className="flex items-center gap-1.5 text-zinc-500 bg-white/5 border border-white/5 py-1 px-2.5 rounded-lg">
               <span className="text-zinc-600">source:</span>
               {loadSource === "cache" ? (
@@ -188,7 +179,6 @@ const PageLoader = () => {
               )}
             </div>
 
-            {/* Diagnostic OS Theme Sync Badge */}
             <div className="flex items-center gap-1.5 text-zinc-500 bg-white/5 border border-white/5 py-1 px-2.5 rounded-lg">
               <span className="text-zinc-600">theme check:</span>
               {themeStatus === "checking..." ? (
@@ -206,7 +196,6 @@ const PageLoader = () => {
           </div>
         </motion.div>
 
-        {/* Dynamic Dual Progress bar */}
         <div className="w-48 h-1 bg-white/5 rounded-full mt-6 overflow-hidden relative border border-white/5">
           <motion.div 
             animate={{ 
@@ -222,7 +211,6 @@ const PageLoader = () => {
         </div>
       </div>
       
-      {/* Outer corner ambient detail */}
       <div className="absolute bottom-6 text-[9px] font-mono text-zinc-500 flex items-center gap-1.5">
         <Cpu className="h-3 w-3 text-primary/70" />
         <span>nxclip.ai • platform active</span>
@@ -275,28 +263,24 @@ function AuthGuard({ children, profile, loading }: { children: React.ReactNode, 
   }
 
   if (!user) {
-    // Store the attempted URL to redirect back after login
     if (location.pathname !== "/login" && location.pathname !== "/signup") {
       safeLocalStorage.setItem("nx_return_to", location.pathname);
     }
     return <Navigate to="/login" />;
   }
 
-  // Redirect to verify-email if user is not verified
   if (!user.emailVerified) {
     if (location.pathname !== "/verify-email") {
       return <Navigate to="/verify-email" />;
     }
   }
 
-  // Redirect to onboarding if profile is not found or not completed, and user is not already on the onboarding page
   const isFinishingOnboarding = safeSessionStorage.getItem("finishing_onboarding") === "true";
   
   if ((!profile || !profile.onboardingCompleted) && location.pathname !== "/onboarding" && !isFinishingOnboarding) {
     return <Navigate to="/onboarding" />;
   }
 
-  // Clear the flag once we've successfully reached a protected route and profile is updated
   if (profile?.onboardingCompleted && isFinishingOnboarding) {
     safeSessionStorage.removeItem("finishing_onboarding");
   }
@@ -329,10 +313,13 @@ function PublicGuard({ children, user, profile, loading }: { children: React.Rea
 export default function App() {
   const { i18n, t } = useTranslation();
   const dispatch = useAppDispatch();
-  const sessionToken = useAuthToken(); // Safely access session token via the hook
+  const sessionToken = useAuthToken();
 
+  // Handle session expiry — clear storage AND Redux
   useEffect(() => {
     const handleSessionExpired = () => {
+      socketService.disconnect();
+      clearPersistedUser();
       dispatch(logoutUser());
       toast.error(t("session_expired", "Your session has expired. Please log in again."));
     };
@@ -355,7 +342,6 @@ export default function App() {
   }, [i18n.language]);
 
   useEffect(() => {
-    // Sync initial loading state based on presence of nx_logged_in flag
     const initialLoading = isLoggedInPersisted();
     dispatch(setAuthLoading(initialLoading));
 
@@ -369,6 +355,22 @@ export default function App() {
         photoURL: parsed.photoURL || null,
         emailVerified: parsed.emailVerified ?? true,
       }));
+
+      // Attempt silent token refresh on boot if using gateway auth
+      const refreshToken = parsed.refreshToken;
+      if (refreshToken && authProvider === "gateway") {
+        identityApi.refreshToken(refreshToken)
+          .then((res: any) => {
+            if (res?.accessToken) {
+              updateAccessToken(res.accessToken, res.refreshToken);
+            }
+          })
+          .catch(() => {
+            // Refresh failed — session is truly expired, force logout
+            clearPersistedUser();
+            dispatch(logoutUser());
+          });
+      }
     } else {
       dispatch(setAuthUser(null));
     }
@@ -387,7 +389,6 @@ export default function App() {
         try {
           const res = await identityApi.getMe();
           if (isSubscribed) {
-            // Synchronize emailVerified status from the API response
             const isVerified = res.emailVerified ?? res.user?.emailVerified ?? user.emailVerified;
             if (user.emailVerified !== isVerified) {
               dispatch(setAuthUser({
@@ -410,7 +411,7 @@ export default function App() {
               photoURL: res.avatarUrl || null,
               plan: (res.plan || "free").toLowerCase() as any,
               role: (res.roles?.[0] || "creator") as any,
-              onboardingCompleted: true,
+              onboardingCompleted: res.onboardingCompleted ?? false,
               createdAt: res.createdAt || new Date().toISOString(),
             }));
             dispatch(setAuthLoading(false));
@@ -425,7 +426,7 @@ export default function App() {
               photoURL: user.photoURL,
               plan: "free",
               role: "creator",
-              onboardingCompleted: true,
+              onboardingCompleted: false,
               createdAt: new Date().toISOString(),
             }));
             dispatch(setAuthLoading(false));
@@ -444,7 +445,6 @@ export default function App() {
       if (docSnap.exists()) {
         const data = docSnap.data() as UserProfile;
         
-        // Ensure admin role for the specific emails
         if (user.email && ADMIN_EMAILS.includes(user.email.toLowerCase()) && data.role !== "admin") {
           updateDoc(docRef, { role: "admin" }).catch(console.error);
         }
