@@ -6,9 +6,11 @@ This file contains persistent instructions and project-specific rules for the nx
 nxclip.ai is an AI-powered platform designed for gaming creators to generate, manage, and optimize their content.
 
 ## Tech Stack
-- **Frontend:** React 18+, Vite, TypeScript
+- **Frontend:** React 19, Vite, TypeScript
 - **Styling:** Tailwind CSS (Modern "dark creator-tech" aesthetic)
-- **Backend/Database:** Firebase (Firestore, Auth)
+- **State Management:** Redux Toolkit
+- **Backend:** Custom API Gateway (`https://api-gateway-216098834386.us-central1.run.app`) via `identityApi`, `contentApi`, `feedApi`, `analyticsApi`, `notificationApi`, `coachApi` in `src/services/apiClient.ts`
+- **Auth:** JWT tokens (1hr access / 30-day refresh) managed via `src/services/auth/authService.ts`
 - **Animations:** motion (from `motion/react`)
 - **Icons:** lucide-react
 - **Charts:** recharts
@@ -30,7 +32,7 @@ The application follows a premium, professional, and sleek "dark creator-tech" d
 
 ### Components
 - **Borders:** Subtle borders (`border-gray-100` in light, `border-white/10` or `border-dark-border` in dark).
-- **Border Radius:** 
+- **Border Radius:**
   - Buttons/Inputs: 10px - 12px (`rounded-lg` or `rounded-xl`).
   - Cards/Panels: 14px - 16px (`rounded-2xl`).
 - **Shadows:** Subtle, soft shadows for depth. Avoid heavy, dark shadows.
@@ -40,7 +42,8 @@ The application follows a premium, professional, and sleek "dark creator-tech" d
 - **Utility First:** Use Tailwind CSS utility classes directly.
 - **Functional Components:** Use React functional components with hooks.
 - **Type Safety:** Maintain strict TypeScript typing across the project.
-- **Firebase Error Handling:** Always use the `handleFirestoreError` utility for Firestore operations to ensure consistent error reporting.
+- **API Calls:** Always use the service modules in `src/services/apiClient.ts`. Never call the gateway URL directly.
+- **Error Handling:** Propagate structured `ApiError` objects from `apiClient.ts`. Display user-friendly messages via `sonner` toasts.
 - **Lucide Icons:** Use `lucide-react` for all icons. Standardize sizes (16-18px for UI icons, 20-24px for feature icons).
 
 ## Feature Specifics
