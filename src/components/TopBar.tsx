@@ -18,8 +18,6 @@ import {
   Video,
   Image as ImageIcon
 } from "lucide-react";
-import { db } from "../firebase";
-import { doc, onSnapshot } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link, useNavigate } from "react-router-dom";
@@ -36,7 +34,7 @@ import { selectAuthProfile, selectAuthUser, logoutUser } from "../store/slices/a
 import { selectAuthProvider } from "../store/slices/uiSlice";
 import { identityApi } from "../services/apiClient";
 import { clearPersistedUser } from "../services/auth/authService";
-import { UserProfile } from "../types";
+import { socketService } from "../services/socketService";
 import {
   CommandDialog,
   CommandEmpty,
@@ -110,6 +108,7 @@ export default function TopBar({ title }: { title?: string }) {
     } catch (err) {
       console.warn("Logout request did not complete on server, clearing session locally:", err);
     } finally {
+      socketService.disconnect();
       clearPersistedUser();
       dispatch(logoutUser());
       navigate("/login");
