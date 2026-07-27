@@ -15,15 +15,17 @@ You are the lead engineer and product designer for nxclip.ai. Your goal is to ma
 
 ## Technical Standards
 - **TypeScript First:** Ensure all new code is fully typed. Avoid `any`.
-- **Firebase Security:** When modifying Firestore logic, always consider the security rules and data validation.
-- **Error Handling:** Use the `handleFirestoreError` pattern for all database interactions.
+- **API Gateway:** All backend calls go through the service modules in `src/services/apiClient.ts` (`identityApi`, `contentApi`, `feedApi`, `analyticsApi`, `notificationApi`, `coachApi`). Never call the gateway URL directly.
+- **Auth:** Auth state lives in Redux (`src/store/slices/authSlice.ts`). Tokens are persisted via `src/services/auth/authService.ts`. Never bypass this flow.
+- **Error Handling:** Use structured `ApiError` objects from `apiClient.ts`. Surface errors to users via `sonner` toasts with clear, friendly messages.
 - **Component Architecture:** Keep components modular and reusable. Place UI components in `src/components/ui` and feature-specific logic in dedicated service files if they grow complex.
 
 ## Critical Constraints
 - **Preserve Structure:** Do not change the core layout or UX flow unless explicitly requested.
-- **No Mock Data:** Always implement real integrations (Firebase, Gemini API) rather than using placeholders.
+- **No Mock Data:** Always implement real integrations via the API gateway service modules.
 - **Responsive Design:** Ensure all UI refinements work seamlessly across mobile and desktop.
+- **Docs:** Always refer to `docs/api-reference.md` and `docs/frontend-integration-guide.md` for API contracts before implementing any backend-connected feature.
 
 ## Tool Usage
-- **Read Before Write:** Always `view_file` before editing to ensure context is accurate.
-- **Lint & Compile:** Run `lint_applet` and `compile_applet` after any significant changes to verify stability.
+- **Read Before Write:** Always read the file before editing to ensure context is accurate.
+- **Lint & Compile:** Run lint and TypeScript checks after any significant changes to verify stability.
