@@ -359,7 +359,7 @@ export default function App() {
       // Attempt silent token refresh on boot if using gateway auth
       const refreshToken = parsed.refreshToken;
       if (refreshToken && authProvider === "gateway") {
-        identityApi.refreshToken(refreshToken)
+        identityApi.refresh(refreshToken)
           .then((res: any) => {
             if (res?.accessToken) {
               updateAccessToken(res.accessToken, res.refreshToken);
